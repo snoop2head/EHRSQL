@@ -56,19 +56,26 @@ class Text2SQLLightningModule(pl.LightningModule):
 
         # Binary Classification for Answerable vs Unanswerable
         logits_impossible = self.is_impossible_head(outputs.encoder_last_hidden_state.mean(dim=1))
-        loss_impossible = F.binary_cross_entropy_with_logits(logits_impossible.squeeze(-1), target_is_impossible.float())
+        logits_impossible = logits_impossible.squeeze(-1).float()
+        loss_impossible = F.binary_cross_entropy_with_logits(logits_impossible, target_is_impossible.float())
         
         # Composite Loss
         loss_total = loss_captioning + loss_impossible * self.lambda_null_classification
 
-        # Compute acc
-        acc1 = metrics.accuracy_score(target_is_impossible.cpu().numpy(), (logits_impossible > self.threshold).cpu().numpy())
+        # Compute Binary Classification metrics
+        binary_label = target_is_impossible.detach().cpu().numpy()
+        binary_pred = (logits_impossible.sigmoid().detach().cpu().numpy() > self.threshold).astype(int)
+        acc1 = metrics.accuracy_score(binary_label, binary_pred)
+        precision, recall, f1, _ = metrics.precision_recall_fscore_support(binary_label, binary_pred, average="binary")
 
         return {
             "loss_total": loss_total,
             "loss_captioning": loss_captioning,
             "loss_impossible": loss_impossible,
             "acc1": acc1,
+            "precision": precision,
+            "recall": recall,
+            "f1": f1,
         }
     
     def generate_bleu(
@@ -83,7 +90,7 @@ class Text2SQLLightningModule(pl.LightningModule):
             num_beams=self.config.inference.num_beams,
             repetition_penalty=self.config.inference.repetition_penalty,
             num_return_sequences=self.config.inference.num_return_sequences,
-            # no_repeat_ngram_size=self.config.inference.no_repeat_ngram_size,
+            no_repeat_ngram_size=self.config.inference.no_repeat_ngram_size,
         )
 
         # revert -100 to padding token for target_ids
@@ -105,9 +112,10 @@ class Text2SQLLightningModule(pl.LightningModule):
 
     def validation_step(self, batch: dict[str, torch.Tensor], idx: int) -> torch.Tensor:
         metrics = self(**batch)
-        metrics.update(self.generate_bleu(**batch)) # bleu
-        pred = metrics.pop("pred")
-        # self.log_table("val/pred", pred, sync_dist=True) # needs higher version
+        if self.config.inference.generate_with_predict:
+            metrics.update(self.generate_bleu(**batch)) # bleu
+            pred = metrics.pop("pred")
+            # self.log_table("val/pred", pred, sync_dist=True) # needs higher version
         self.log_dict({f"val/{k}": v for k, v in metrics.items()}, sync_dist=True)
 
     def test_step(self, batch: dict[str, torch.Tensor], idx: int) -> torch.Tensor:

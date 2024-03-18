@@ -202,12 +202,17 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
     train_dataset = T5Dataset(config, NEW_TRAIN_DIR, tables_file=TABLES_PATH, is_test=False)
     valid_dataset = T5Dataset(config, NEW_VALID_DIR, tables_file=TABLES_PATH, is_test=False)
     test_dataset = T5Dataset(config, NEW_TEST_DIR, tables_file=TABLES_PATH, is_test=True)
+    # breakpoint()
+
+    cpu_count = multiprocessing.cpu_count()
+    gpu_count = torch.cuda.device_count()
+    num_workers = cpu_count // (gpu_count * 2) if gpu_count > 0 else cpu_count // 2
 
     train_dataloader = DataLoader(
         train_dataset,
         batch_size=config.train.train_batch_size,
         shuffle=True,
-        num_workers=multiprocessing.cpu_count() // 4,
+        num_workers=num_workers,
         pin_memory=True,
         persistent_workers=True,
         collate_fn=train_dataset.collate_fn,
@@ -215,7 +220,7 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
     val_dataloader = DataLoader(
         valid_dataset,
         batch_size=config.train.valid_batch_size,
-        num_workers=multiprocessing.cpu_count() // 4,
+        num_workers=num_workers,
         pin_memory=True,
         persistent_workers=True,
         collate_fn=valid_dataset.collate_fn,
@@ -223,7 +228,7 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
     test_dataloader = DataLoader(
         test_dataset,
         batch_size=config.train.valid_batch_size,
-        num_workers=multiprocessing.cpu_count() // 4,
+        num_workers=num_workers,
         pin_memory=True,
         persistent_workers=True,
         collate_fn=test_dataset.collate_fn,

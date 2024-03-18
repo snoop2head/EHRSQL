@@ -17,9 +17,10 @@ warnings.filterwarnings("ignore")
 
 def main(config: DictConfig):
     _, _, test_dataloader = create_dataloaders(config)
-    checkpoint = ModelCheckpoint(
-        monitor="val/bleu", mode="max", save_weights_only=True
-    )
+    if config.inference.generate_with_predict:
+        checkpoint = ModelCheckpoint(monitor="val/bleu", mode="max", save_weights_only=True)
+    else:
+        checkpoint = ModelCheckpoint(monitor="val/loss_total", mode="min", save_weights_only=True)
 
     trainer = Trainer(
         accelerator="gpu",

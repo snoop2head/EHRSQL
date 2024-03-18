@@ -31,9 +31,11 @@ def set_seed(seed: int):
 def main(config: DictConfig):
     set_seed(config.seed)
     train_dataloader, val_dataloader, test_dataloader = create_dataloaders(config)
-    checkpoint = ModelCheckpoint(
-        monitor="val/bleu", mode="max", save_weights_only=True
-    )
+    
+    if config.inference.generate_with_predict:
+        checkpoint = ModelCheckpoint(monitor="val/bleu", mode="max", save_weights_only=True)
+    else:
+        checkpoint = ModelCheckpoint(monitor="val/loss_total", mode="min", save_weights_only=True)
 
     trainer = Trainer(
         accelerator="gpu",
