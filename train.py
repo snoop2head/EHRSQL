@@ -41,7 +41,6 @@ def main(config: DictConfig):
         accelerator="gpu",
         devices="auto",
         precision=config.train.precision,
-        amp_backend="native",
         strategy="ddp",
         max_steps=config.scheduler.num_training_steps,
         log_every_n_steps=config.train.log_every_n_steps,

@@ -197,7 +197,6 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
     NEW_VALID_DIR = os.path.join(config.data.base_data_dir, '__valid')
     NEW_TEST_DIR = os.path.join(config.data.base_data_dir, 'valid')
     TABLES_PATH = os.path.join('data', config.data.db_id, 'tables.json')               # JSON containing database schema
-    DB_PATH = os.path.join('data', config.data.db_id, f'{config.data.db_id}.sqlite')               # Database path
     
     train_dataset = T5Dataset(config, NEW_TRAIN_DIR, tables_file=TABLES_PATH, is_test=False)
     valid_dataset = T5Dataset(config, NEW_VALID_DIR, tables_file=TABLES_PATH, is_test=False)

@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import os
 from typing import Any
 
 import pytorch_lightning as pl
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -15,6 +17,8 @@ from transformers import T5Tokenizer, T5Config, T5Model, T5ForConditionalGenerat
 # Metrics
 from sklearn import metrics
 from evaluate import load
+from scoring_program.scoring_utils import execute_all, reliability_score, penalize
+from scoring_program.postprocessing import post_process_sql
 
 class Text2SQLLightningModule(pl.LightningModule):
     """
@@ -24,6 +28,7 @@ class Text2SQLLightningModule(pl.LightningModule):
     def __init__(self, config: DictConfig):
         super().__init__()
         self.config = config
+        self.save_hyperparameters()
 
         # Tokenizer and Transformer Backbone
         self.tokenizer = T5Tokenizer.from_pretrained(config.model.name_or_path)
@@ -65,17 +70,17 @@ class Text2SQLLightningModule(pl.LightningModule):
         # Compute Binary Classification metrics
         binary_label = target_is_impossible.detach().cpu().numpy()
         binary_pred = (logits_impossible.sigmoid().detach().cpu().numpy() > self.threshold).astype(int)
-        acc1 = metrics.accuracy_score(binary_label, binary_pred)
+        acc = metrics.accuracy_score(binary_label, binary_pred)
         precision, recall, f1, _ = metrics.precision_recall_fscore_support(binary_label, binary_pred, average="binary")
 
         return {
             "loss_total": loss_total,
             "loss_captioning": loss_captioning,
             "loss_impossible": loss_impossible,
-            "acc1": acc1,
-            "precision": precision,
-            "recall": recall,
+            "acc": acc,
             "f1": f1,
+            # "precision": precision, # IDK Why but the results are the same as f1
+            # "recall": recall, # IDK Why but the results are the same as f1
         }
     
     def generate_bleu(
@@ -90,18 +95,42 @@ class Text2SQLLightningModule(pl.LightningModule):
             num_beams=self.config.inference.num_beams,
             repetition_penalty=self.config.inference.repetition_penalty,
             num_return_sequences=self.config.inference.num_return_sequences,
-            no_repeat_ngram_size=self.config.inference.no_repeat_ngram_size,
         )
 
         # revert -100 to padding token for target_ids
         target_ids[target_ids[:, :] == -100] = self.tokenizer.pad_token_id
         generated_texts = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
         target_texts = self.tokenizer.batch_decode(target_ids, skip_special_tokens=True)
+
+        # drop samples with target_is_impossible = 1, since they are not answerable
+        id = np.array(id)
+        id = id[(target_is_impossible == 0).detach().cpu().numpy()]
+        generated_texts = [g for g, imp in zip(generated_texts, target_is_impossible) if imp == 0]
+        target_texts = [t for t, imp in zip(target_texts, target_is_impossible) if imp == 0]
+
+        # get bleu metrics
+        if self.config.inference.post_process:
+            generated_texts = [post_process_sql(g) for g in generated_texts]
+            target_texts = [post_process_sql(t) for t in target_texts]
         bleu_metric = bleu.compute(predictions=generated_texts, references=target_texts)
-        generated_outputs = [[g, t] for g, t in zip(generated_texts, target_texts)]
+
+        # get sql reliability score
+        DB_PATH = os.path.join('data', self.config.data.db_id, f'{self.config.data.db_id}.sqlite')
+        real_result = execute_all({i: t for i, t in zip(id, target_texts)}, db_path=DB_PATH, tag='real')
+        pred_result = execute_all({i: g for i, g in zip(id, generated_texts)}, db_path=DB_PATH, tag='pred')
+        scores, score_dict = reliability_score(real_result, pred_result, return_dict=True)
+        accuracy0 = penalize(scores, penalty=0)
+        accuracy5 = penalize(scores, penalty=5)
+        accuracy10 = penalize(scores, penalty=10)
+        accuracyN = penalize(scores, penalty=1000)
+
         return {
             "bleu": bleu_metric["bleu"],
-            "pred": wandb.Table(columns=["pred", "target"], data=generated_outputs),
+            "RS0": accuracy0,
+            "RS5": accuracy5,
+            "RS10": accuracy10,
+            "RSN": accuracyN,
+            "pred": wandb.Table(columns=["pred", "target"], data=[[g, t] for g, t in zip(generated_texts, target_texts)]),
         }
 
     
