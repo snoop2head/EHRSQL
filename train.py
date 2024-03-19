@@ -33,7 +33,7 @@ def main(config: DictConfig):
     train_dataloader, val_dataloader, test_dataloader = create_dataloaders(config)
     
     if config.inference.generate_with_predict:
-        checkpoint = ModelCheckpoint(monitor="val/bleu", mode="max", save_weights_only=True)
+        checkpoint = ModelCheckpoint(monitor="val/RS10", mode="max", save_weights_only=True)
     else:
         checkpoint = ModelCheckpoint(monitor="val/loss_total", mode="min", save_weights_only=True)
 
