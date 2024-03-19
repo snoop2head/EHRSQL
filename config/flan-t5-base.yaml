@@ -7,11 +7,11 @@ data:
   db_id: mimic_iv
   base_data_dir: ./data/mimic_iv
   score_program_dir: ./scoring_program/
-  max_source_length: 70
+  max_source_length: 1024
   max_target_length: 492
   split_ratio: 0.9 # split_ratio for training, 1 - split_ratio for validation
   exclude_unans: false # exclude unanswerable questions b/c they have no valid sql.
-  append_schema_info: false
+  append_schema_info: true
 
 model:
   name_or_path: juierror/flan-t5-text2sql-with-schema-v2
@@ -29,14 +29,14 @@ scheduler:
 lambda_null_classification: 1.0 # BCE loss weight for is_impossible
 
 logging:
-  run_name: flan-t5-text2sql-with-schema-v2
+  run_name: baseline
   project_name: text-to-sql
   entity_name: quoqa-nlp
 
 train:
   evaluation_strategy: epoch
-  train_batch_size: 64 # per-device batch size
-  valid_batch_size: 64 # per-device batch size
+  train_batch_size: 8 # per-device batch size
+  valid_batch_size: 8 # per-device batch size
   accumulate_grad_batches: 1
   gradient_clip_val: 1.0
   gradient_checkpointing: false
