@@ -7,8 +7,8 @@ data:
   db_id: mimic_iv
   base_data_dir: ./data/mimic_iv
   score_program_dir: ./scoring_program/
-  max_source_length: 1024
-  max_target_length: 492
+  max_source_length: 700
+  max_target_length: 500
   split_ratio: 0.9 # split_ratio for training, 1 - split_ratio for validation
   exclude_unans: false # exclude unanswerable questions b/c they have no valid sql.
   append_schema_info: true
@@ -29,7 +29,7 @@ scheduler:
 lambda_null_classification: 1.0 # BCE loss weight for is_impossible
 
 logging:
-  run_name: baseline
+  run_name: baseline-short-restructure-prompt
   project_name: text-to-sql
   entity_name: quoqa-nlp
 
