@@ -56,7 +56,7 @@ def main(config: DictConfig):
     )
     trainer.fit(Text2SQLLightningModule(config), train_dataloader, val_dataloader)
     trainer.test(ckpt_path=checkpoint.best_model_path, dataloaders=[test_dataloader])
-    shutil.copy(checkpoint.best_model_path, ".")
+    shutil.copy(f"{config.logging.run_name}{checkpoint.best_model_path}", ".")
 
 if __name__ == "__main__":
     main(OmegaConf.merge(OmegaConf.load(sys.argv[1]), OmegaConf.from_cli()))
