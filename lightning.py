@@ -130,7 +130,7 @@ class Text2SQLLightningModule(pl.LightningModule):
             "RS5": accuracy5,
             "RS10": accuracy10,
             "RSN": accuracyN,
-            "pred": wandb.Table(columns=["pred", "target"], data=[[g, t] for g, t in zip(generated_texts, target_texts)]),
+            "pred": [[g, t] for g, t in zip(generated_texts, target_texts)],
         }
 
     
@@ -144,7 +144,7 @@ class Text2SQLLightningModule(pl.LightningModule):
         if self.config.inference.generate_with_predict:
             metrics.update(self.generate_bleu(**batch)) # bleu
             pred = metrics.pop("pred")
-            # self.log_table("val/pred", pred, sync_dist=True) # needs higher version
+            self.logger.log_text(key="val/pred", columns=["generated", "label"], data=pred)
         self.log_dict({f"val/{k}": v for k, v in metrics.items()}, sync_dist=True)
 
     def test_step(self, batch: dict[str, torch.Tensor], idx: int) -> torch.Tensor:

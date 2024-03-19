@@ -25,8 +25,8 @@ optimizer:
 scheduler:
   name: cosine
   num_warmup_steps: 0
-  num_training_steps: 1000
-lambda_null_classification: 10.0 # BCE loss weight for is_impossible
+  num_training_steps: 800
+lambda_null_classification: 1.0 # BCE loss weight for is_impossible
 
 logging:
   run_name: flan-t5-text2sql-with-schema-v2
@@ -41,7 +41,7 @@ train:
   gradient_clip_val: 1.0
   gradient_checkpointing: false
   validation_interval: 1.0
-  log_every_n_steps: 100
+  log_every_n_steps: 80
   label_smoothing: 0.0
   is_impossible_dropout: 0.1
   precision: bf16
