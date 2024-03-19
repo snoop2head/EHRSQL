@@ -226,7 +226,7 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
     )
     test_dataloader = DataLoader(
         test_dataset,
-        batch_size=config.train.valid_batch_size,
+        batch_size=config.train.test_batch_size,
         num_workers=num_workers,
         pin_memory=True,
         persistent_workers=True,
