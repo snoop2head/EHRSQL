@@ -163,3 +163,4 @@ text-to-sql
 lightning_logs
 *.ckpt
 *.zip
+*.json

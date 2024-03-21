@@ -197,9 +197,10 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
 
     if config.data.split_ratio != 1.0:
         NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, '__train')
+        NEW_VALID_DIR = os.path.join(config.data.base_data_dir, '__valid')
     if config.data.split_ratio == 1.0:
         NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, 'train')
-    NEW_VALID_DIR = os.path.join(config.data.base_data_dir, '__valid')
+        NEW_VALID_DIR = os.path.join(config.data.base_data_dir, 'train')
     NEW_TEST_DIR = os.path.join(config.data.base_data_dir, 'valid')
     TABLES_PATH = os.path.join('data', config.data.db_id, 'tables.json')               # JSON containing database schema
     

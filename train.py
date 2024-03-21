@@ -32,10 +32,22 @@ def main(config: DictConfig):
     set_seed(config.seed)
     train_dataloader, val_dataloader, test_dataloader = create_dataloaders(config)
     
-    if config.inference.generate_with_predict:
-        checkpoint = ModelCheckpoint(monitor="val/RS10", mode="max", save_weights_only=True)
+    checkpoint_name = config.logging.run_name
+    checkpoint_name += "{epoch}-{step}"
+    if config.inference.generate_with_predict and config.data.split_ratio != 1.0:
+        checkpoint = ModelCheckpoint(
+            monitor="val/RS10", 
+            mode="max", 
+            save_weights_only=True,
+            filename=checkpoint_name
+        )
     else:
-        checkpoint = ModelCheckpoint(monitor="val/loss_total", mode="min", save_weights_only=True)
+        checkpoint = ModelCheckpoint(
+            monitor="val/loss_total", 
+            mode="min", 
+            save_weights_only=True,
+            filename=checkpoint_name
+        )
 
     trainer = Trainer(
         accelerator="gpu",
@@ -56,7 +68,7 @@ def main(config: DictConfig):
     )
     trainer.fit(Text2SQLLightningModule(config), train_dataloader, val_dataloader)
     trainer.test(ckpt_path=checkpoint.best_model_path, dataloaders=[test_dataloader])
-    shutil.copy(f"{config.logging.run_name}{checkpoint.best_model_path}", ".")
+    shutil.copy(f"{checkpoint.best_model_path}", ".")
 
 if __name__ == "__main__":
     main(OmegaConf.merge(OmegaConf.load(sys.argv[1]), OmegaConf.from_cli()))
