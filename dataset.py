@@ -42,6 +42,11 @@ class T5Dataset(Dataset):
         self.is_test = is_test # this option does not include target label
 
         self.tokenizer = AutoTokenizer.from_pretrained(config.model.name_or_path)
+        if "text2sql" in config.model.name_or_path and "t5" in config.model.name_or_path:
+            pass
+        else:
+            self.tokenizer.add_tokens(["<"])
+
         self.db_id = config.data.db_id
         self.max_source_length = config.data.max_source_length
         self.max_target_length = config.data.max_target_length

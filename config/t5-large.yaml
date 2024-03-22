@@ -1,0 +1,59 @@
+# https://github.com/ReadingLips/CMTS-VSR/tree/coordinate/src
+# https://github.com/QuoQA-NLP/T5_Translation
+# https://github.com/QuoQA-NLP/MRC_Baseline/
+seed: 42
+
+data:
+  db_id: mimic_iv
+  base_data_dir: ./data/mimic_iv
+  score_program_dir: ./scoring_program/
+  max_source_length: 700
+  max_target_length: 500
+  split_ratio: 0.9 # split_ratio for training, 1 - split_ratio for validation
+  exclude_unans: false # exclude unanswerable questions b/c they have no valid sql.
+  append_schema_info: true
+
+model:
+  name_or_path: google/flan-t5-base
+
+
+optimizer:
+  lr: 5e-4
+  betas: [0.9, 0.999]
+  eps: 1e-6
+  weight_decay: 0.01
+scheduler:
+  name: cosine
+  num_warmup_steps: 0
+  num_training_steps: 800
+lambda_null_classification: 1.0 # BCE loss weight for is_impossible
+
+logging:
+  run_name: baselinev3-flan-t5-base
+  project_name: text-to-sql
+  entity_name: quoqa-nlp
+
+train:
+  evaluation_strategy: epoch
+  train_batch_size: 8 # per-device batch size
+  valid_batch_size: 8 # per-device batch size
+  test_batch_size: 32 # per-device batch size
+  accumulate_grad_batches: 1
+  gradient_clip_val: 1.0
+  gradient_checkpointing: false
+  validation_interval: 1.0
+  log_every_n_steps: 80
+  label_smoothing: 0.0
+  is_impossible_dropout: 0.1
+  precision: bf16
+
+inference:
+  post_process: true
+  generate_with_predict: true # default as true for bleu score calculation
+  is_impossible_threshold: 0.5 # needs heuristic adjustment for null vs answerable questions
+  num_beams: 5 # can be bigger than 5
+  repetition_penalty: 1.3
+  num_return_sequences: 1
+
+predict:
+  ckpt_path: /home/work/inter_speech/joint-learning/epoch=4-step=365.ckpt

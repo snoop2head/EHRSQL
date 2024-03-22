@@ -34,6 +34,11 @@ class Text2SQLLightningModule(pl.LightningModule):
         # Tokenizer and Transformer Backbone
         self.tokenizer = T5Tokenizer.from_pretrained(config.model.name_or_path)
         self.t5 = T5ForConditionalGeneration.from_pretrained(config.model.name_or_path)
+        if "text2sql" in config.model.name_or_path and "t5" in config.model.name_or_path:
+            pass
+        else:
+            self.tokenizer.add_tokens(["<"])
+            self.t5.resize_token_embeddings(len(self.tokenizer))
         
         # Head for is_impossible
         self.is_impossible_head = nn.Sequential(
