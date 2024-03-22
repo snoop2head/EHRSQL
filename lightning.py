@@ -112,8 +112,13 @@ class Text2SQLLightningModule(pl.LightningModule):
         # get bleu metrics
         if self.config.inference.post_process:
             generated_texts = [post_process_sql(g) for g in generated_texts]
-            target_texts = [post_process_sql(t) for t in target_texts]
-        bleu_metric = bleu.compute(predictions=generated_texts, references=target_texts)
+            target_texts = [post_process_sql(t) for t in target_texts]        
+        
+        if len(generated_texts) != 0 and len(target_texts) != 0:
+            bleu_metric = bleu.compute(predictions=generated_texts, references=target_texts)
+            bleu_score = bleu_metric["bleu"]
+        else:
+            bleu_score = 0.0
 
         # get sql reliability score
         DB_PATH = os.path.join('data', self.config.data.db_id, f'{self.config.data.db_id}.sqlite')
@@ -126,7 +131,7 @@ class Text2SQLLightningModule(pl.LightningModule):
         accuracyN = penalize(scores, penalty=1000)
 
         return {
-            "bleu": bleu_metric["bleu"],
+            "bleu": bleu_score,
             "RS0": accuracy0,
             "RS5": accuracy5,
             "RS10": accuracy10,
