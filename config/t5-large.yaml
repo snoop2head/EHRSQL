@@ -14,7 +14,7 @@ data:
   append_schema_info: true
 
 model:
-  name_or_path: google/flan-t5-base
+  name_or_path: google/flan-t5-large
 
 
 optimizer:
@@ -25,18 +25,18 @@ optimizer:
 scheduler:
   name: cosine
   num_warmup_steps: 0
-  num_training_steps: 800
+  num_training_steps: 2900
 lambda_null_classification: 1.0 # BCE loss weight for is_impossible
 
 logging:
-  run_name: baselinev3-flan-t5-base
+  run_name: baselinev3-flan-t5-large
   project_name: text-to-sql
   entity_name: quoqa-nlp
 
 train:
   evaluation_strategy: epoch
-  train_batch_size: 8 # per-device batch size
-  valid_batch_size: 8 # per-device batch size
+  train_batch_size: 4 # per-device batch size
+  valid_batch_size: 4 # per-device batch size
   test_batch_size: 32 # per-device batch size
   accumulate_grad_batches: 1
   gradient_clip_val: 1.0
