@@ -67,7 +67,7 @@ def main(config: DictConfig):
         callbacks=[checkpoint, LearningRateMonitor("step")],
     )
     trainer.fit(Text2SQLLightningModule(config), train_dataloader, val_dataloader)
-    trainer.test(ckpt_path=checkpoint.best_model_path, dataloaders=[test_dataloader])
+    trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
     shutil.copy(f"{checkpoint.best_model_path}", ".")
 
 if __name__ == "__main__":
