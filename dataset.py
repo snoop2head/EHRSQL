@@ -42,6 +42,11 @@ class T5Dataset(Dataset):
         self.is_test = is_test # this option does not include target label
 
         self.tokenizer = AutoTokenizer.from_pretrained(config.model.name_or_path)
+        if "text2sql" in config.model.name_or_path and "t5" in config.model.name_or_path:
+            pass
+        else:
+            self.tokenizer.add_tokens(["<"])
+
         self.db_id = config.data.db_id
         self.max_source_length = config.data.max_source_length
         self.max_target_length = config.data.max_target_length
@@ -125,7 +130,9 @@ class T5Dataset(Dataset):
             if self.db_json:
                 tables_json = [db for db in self.db_json if db["db_id"] == self.db_id][0]
                 schema_description = self.get_schema_description(tables_json)
-                question = f"tables: {schema_description}. question: {question}"
+                schema_description = ", ".join(schema_description)
+                question = f"convert question and table into SQL query. tables: {schema_description}. question: {question}"
+            # breakpoint()
             return question
         else:
             return question
@@ -143,13 +150,13 @@ class T5Dataset(Dataset):
             for column_name, column_type in zip(tables_json["column_names_original"], tables_json["column_types"])
         ]
 
-        schema_description = [""]
+        schema_description = []
         for table_index, table_name in enumerate(table_names):
             table_columns = [column[1] for column in columns if column[0] == table_index]
             if shuffle_schema:
                 self.random.shuffle(table_columns)
-            column_desc = " , ".join(table_columns)
-            schema_description.append(f"{table_name.lower()} : {column_desc}")
+            column_desc = ",".join(table_columns)
+            schema_description.append(f"{table_name.lower()}({column_desc})")
 
         return schema_description
 
@@ -193,8 +200,12 @@ def trim_batch(input_ids, pad_token_id, attention_mask=None):
 
 def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, DataLoader]:
 
-    NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, '__train')
-    NEW_VALID_DIR = os.path.join(config.data.base_data_dir, '__valid')
+    if config.data.split_ratio != 1.0:
+        NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, '__train')
+        NEW_VALID_DIR = os.path.join(config.data.base_data_dir, '__valid')
+    if config.data.split_ratio == 1.0:
+        NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, 'train')
+        NEW_VALID_DIR = os.path.join(config.data.base_data_dir, 'train')
     NEW_TEST_DIR = os.path.join(config.data.base_data_dir, 'valid')
     TABLES_PATH = os.path.join('data', config.data.db_id, 'tables.json')               # JSON containing database schema
     
@@ -219,6 +230,7 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
     val_dataloader = DataLoader(
         valid_dataset,
         batch_size=config.train.valid_batch_size,
+        shuffle=False if config.data.split_ratio != 1.0 else True,
         num_workers=num_workers,
         pin_memory=True,
         persistent_workers=True,
@@ -226,7 +238,7 @@ def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, Data
     )
     test_dataloader = DataLoader(
         test_dataset,
-        batch_size=config.train.valid_batch_size,
+        batch_size=config.train.test_batch_size,
         num_workers=num_workers,
         pin_memory=True,
         persistent_workers=True,

@@ -19,6 +19,7 @@ from sklearn import metrics
 from evaluate import load
 from scoring_program.scoring_utils import execute_all, reliability_score, penalize
 from scoring_program.postprocessing import post_process_sql
+from utils import read_json, write_json
 
 class Text2SQLLightningModule(pl.LightningModule):
     """
@@ -33,6 +34,11 @@ class Text2SQLLightningModule(pl.LightningModule):
         # Tokenizer and Transformer Backbone
         self.tokenizer = T5Tokenizer.from_pretrained(config.model.name_or_path)
         self.t5 = T5ForConditionalGeneration.from_pretrained(config.model.name_or_path)
+        if "text2sql" in config.model.name_or_path and "t5" in config.model.name_or_path:
+            pass
+        else:
+            self.tokenizer.add_tokens(["<"])
+            self.t5.resize_token_embeddings(len(self.tokenizer))
         
         # Head for is_impossible
         self.is_impossible_head = nn.Sequential(
@@ -55,7 +61,7 @@ class Text2SQLLightningModule(pl.LightningModule):
             input_ids=source_ids,
             attention_mask=source_mask,
             labels=target_ids,
-            output_hidden_states=True,
+            output_hidden_states=False,
         )
         loss_captioning = outputs.loss
 
@@ -111,8 +117,13 @@ class Text2SQLLightningModule(pl.LightningModule):
         # get bleu metrics
         if self.config.inference.post_process:
             generated_texts = [post_process_sql(g) for g in generated_texts]
-            target_texts = [post_process_sql(t) for t in target_texts]
-        bleu_metric = bleu.compute(predictions=generated_texts, references=target_texts)
+            target_texts = [post_process_sql(t) for t in target_texts]        
+        
+        if len(generated_texts) != 0 and len(target_texts) != 0:
+            bleu_metric = bleu.compute(predictions=generated_texts, references=target_texts)
+            bleu_score = bleu_metric["bleu"]
+        else:
+            bleu_score = 0.0
 
         # get sql reliability score
         DB_PATH = os.path.join('data', self.config.data.db_id, f'{self.config.data.db_id}.sqlite')
@@ -125,7 +136,7 @@ class Text2SQLLightningModule(pl.LightningModule):
         accuracyN = penalize(scores, penalty=1000)
 
         return {
-            "bleu": bleu_metric["bleu"],
+            "bleu": bleu_score,
             "RS0": accuracy0,
             "RS5": accuracy5,
             "RS10": accuracy10,
@@ -147,10 +158,48 @@ class Text2SQLLightningModule(pl.LightningModule):
             self.logger.log_text(key="val/pred", columns=["generated", "label"], data=pred)
         self.log_dict({f"val/{k}": v for k, v in metrics.items()}, sync_dist=True)
 
+
+    def on_test_epoch_start(self):
+        """ TEST: https://github.com/ReadingLips/sync_auto_avsr/blob/mainv2/lightning.py """
+        self.predictions = {}
+
     def test_step(self, batch: dict[str, torch.Tensor], idx: int) -> torch.Tensor:
-        """ NEEDS TO BE IMPLEMENTED"""
-        metrics = self(**batch) # loss
-        self.log_dict({f"test/{k}": v for k, v in metrics.items()}, sync_dist=True)
+        # generate
+        outputs = self.t5.generate(
+            input_ids=batch["source_ids"],
+            max_length=self.config.data.max_target_length,
+            num_beams=self.config.inference.num_beams,
+            repetition_penalty=self.config.inference.repetition_penalty,
+            num_return_sequences=self.config.inference.num_return_sequences,
+        )
+        generated_texts = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
+        if self.config.inference.post_process:
+            generated_texts = [post_process_sql(g) for g in generated_texts]
+        
+        # classify
+        outputs = self.t5.encoder(
+            input_ids=batch["source_ids"],
+            attention_mask=batch["source_mask"],
+            output_hidden_states=False,
+        )
+
+        logits_impossible = self.is_impossible_head(outputs.last_hidden_state.mean(dim=1))
+        logits_impossible = logits_impossible.squeeze(-1).float()
+        binary_pred = (logits_impossible.sigmoid().detach().cpu().numpy() > self.threshold).astype(int)
+        
+        for i, p, b in zip(batch["id"], generated_texts, binary_pred):
+            if b == 1 or b == True:
+                self.predictions[f"{i}"] = "null"
+            elif b == 0 or b == False:
+                self.predictions[f"{i}"] = p
+        
+    def on_test_epoch_end(self):
+        # for each ddp process, save predictions
+        device_id = self.local_rank if self.local_rank != -1 else 0
+        RESULT_DIR = f"./{self.config.logging.run_name}"
+        os.makedirs(RESULT_DIR, exist_ok=True)
+        prediction_path = os.path.join(RESULT_DIR, f"predictions_{device_id}.json")
+        write_json(prediction_path, self.predictions)
 
     def configure_optimizers(self) -> tuple[list[Optimizer], list[dict[str, Any]]]:
         do_decay = [p for p in self.parameters() if p.requires_grad and p.ndim >= 2]
