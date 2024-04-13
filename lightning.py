@@ -196,7 +196,7 @@ class Text2SQLLightningModule(pl.LightningModule):
     def on_test_epoch_end(self):
         # for each ddp process, save predictions
         device_id = self.local_rank if self.local_rank != -1 else 0
-        RESULT_DIR = f"./{self.config.logging.run_name}"
+        RESULT_DIR = f"./RESULTS/{self.config.logging.run_name}"
         os.makedirs(RESULT_DIR, exist_ok=True)
         prediction_path = os.path.join(RESULT_DIR, f"predictions_{device_id}.json")
         write_json(prediction_path, self.predictions)
