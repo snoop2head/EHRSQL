@@ -18,6 +18,7 @@ from lightning import Text2SQLLightningModule
 from utils import gather_and_save
 
 warnings.filterwarnings("ignore")
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 def set_seed(seed: int):
     np.random.seed(seed)

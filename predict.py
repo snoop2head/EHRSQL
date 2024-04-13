@@ -36,7 +36,7 @@ def main(config: DictConfig):
         logger=None,
         callbacks=[checkpoint, LearningRateMonitor("step")],
     )
-    # trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
+    trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
     gather_and_save(config, trainer) # gather all predictions and save
 
 if __name__ == "__main__":
