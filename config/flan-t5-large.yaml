@@ -29,7 +29,7 @@ scheduler:
 lambda_null_classification: 1.0 # BCE loss weight for is_impossible
 
 logging:
-  run_name: baselinev3-flan-t5-large
+  run_name: baselinev4-flan-t5-large
   project_name: text-to-sql
   entity_name: quoqa-nlp
 
