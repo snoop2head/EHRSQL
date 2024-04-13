@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import shutil
+import os
 import sys
 import warnings
 
@@ -15,6 +15,7 @@ from pytorch_lightning.loggers import WandbLogger
 
 from dataset import create_dataloaders
 from lightning import Text2SQLLightningModule
+from utils import read_json, write_json
 
 warnings.filterwarnings("ignore")
 
@@ -68,6 +69,13 @@ def main(config: DictConfig):
     )
     trainer.fit(Text2SQLLightningModule(config), train_dataloader, val_dataloader)
     trainer.test(model=Text2SQLLightningModule(config), ckpt_path=checkpoint.best_model_path, dataloaders=[test_dataloader])
+
+    # gather all predictions and save
+    predictions = {}
+    RESULT_DIR = f"./{config.logging.run_name}"
+    predictions.update(read_json(os.path.join(RESULT_DIR, f"predictions_{i}.json")) for i in range(trainer.world_size))
+    write_json(os.path.join(RESULT_DIR, "predictions.json"), predictions)
+    os.system(f"cd {RESULT_DIR} && zip -r predictions.zip predictions.json")
 
 if __name__ == "__main__":
     main(OmegaConf.merge(OmegaConf.load(sys.argv[1]), OmegaConf.from_cli()))

@@ -200,15 +200,6 @@ class Text2SQLLightningModule(pl.LightningModule):
         os.makedirs(RESULT_DIR, exist_ok=True)
         prediction_path = os.path.join(RESULT_DIR, f"predictions_{device_id}.json")
         write_json(prediction_path, self.predictions)
-        
-        # gather all predictions and save
-        if self.trainer.is_global_zero:
-            predictions = {}
-            for i in range(self.trainer.world_size):
-                predictions.update(read_json(os.path.join(RESULT_DIR, f"predictions_{i}.json")))
-            write_json(os.path.join(RESULT_DIR, "predictions.json"), predictions)
-            os.system(f"cd {RESULT_DIR} && zip -r predictions.zip predictions.json")
-        
 
     def configure_optimizers(self) -> tuple[list[Optimizer], list[dict[str, Any]]]:
         do_decay = [p for p in self.parameters() if p.requires_grad and p.ndim >= 2]
