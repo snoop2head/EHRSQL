@@ -12,6 +12,7 @@ data:
   split_ratio: 0.9 # split_ratio for training, 1 - split_ratio for validation
   exclude_unans: false # exclude unanswerable questions b/c they have no valid sql.
   append_schema_info: true
+  kfold_split: false
 
 model:
   name_or_path: google/flan-t5-large

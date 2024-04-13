@@ -76,7 +76,7 @@ class Text2SQLLightningModule(pl.LightningModule):
         # Compute Binary Classification metrics
         binary_label = target_is_impossible.detach().cpu().numpy()
         binary_pred = (logits_impossible.sigmoid().detach().cpu().numpy() > self.threshold).astype(int)
-        acc = metrics.accuracy_score(binary_label, binary_pred)
+        acc = (binary_label == binary_pred).sum().item() / binary_label.shape[0]
         precision, recall, f1, _ = metrics.precision_recall_fscore_support(binary_label, binary_pred, average="binary")
 
         return {
@@ -196,7 +196,7 @@ class Text2SQLLightningModule(pl.LightningModule):
     def on_test_epoch_end(self):
         # for each ddp process, save predictions
         device_id = self.local_rank if self.local_rank != -1 else 0
-        RESULT_DIR = f"./{self.config.logging.run_name}"
+        RESULT_DIR = f"./RESULTS/{self.config.logging.run_name}"
         os.makedirs(RESULT_DIR, exist_ok=True)
         prediction_path = os.path.join(RESULT_DIR, f"predictions_{device_id}.json")
         write_json(prediction_path, self.predictions)

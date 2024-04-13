@@ -12,6 +12,7 @@ data:
   split_ratio: 0.9 # split_ratio for training, 1 - split_ratio for validation
   exclude_unans: false # exclude unanswerable questions b/c they have no valid sql.
   append_schema_info: true
+  kfold_split: false
 
 model:
   name_or_path: juierror/flan-t5-text2sql-with-schema-v2
@@ -25,24 +26,24 @@ optimizer:
 scheduler:
   name: cosine
   num_warmup_steps: 0
-  num_training_steps: 800
+  num_training_steps: 1250
 lambda_null_classification: 1.0 # BCE loss weight for is_impossible
 
 logging:
-  run_name: baseline-short-restructure-prompt
+  run_name: baselinev4-flan-t5-text2sql-with-schema-v2
   project_name: text-to-sql
   entity_name: quoqa-nlp
 
 train:
   evaluation_strategy: epoch
-  train_batch_size: 8 # per-device batch size
-  valid_batch_size: 8 # per-device batch size
+  train_batch_size: 16 # per-device batch size
+  valid_batch_size: 32 # per-device batch size
   test_batch_size: 32 # per-device batch size
   accumulate_grad_batches: 1
   gradient_clip_val: 1.0
   gradient_checkpointing: false
   validation_interval: 1.0
-  log_every_n_steps: 80
+  log_every_n_steps: 40
   label_smoothing: 0.0
   is_impossible_dropout: 0.1
   precision: bf16
@@ -56,4 +57,4 @@ inference:
   num_return_sequences: 1
 
 predict:
-  ckpt_path: /home/work/inter_speech/joint-learning/epoch=4-step=365.ckpt
+  ckpt_path: /home/yjahn/joint-learning/text-to-sql/kl5931rb/checkpoints/baselinev3-flan-t5-largeepoch=8-step=2601.ckpt
