@@ -32,11 +32,12 @@ def set_seed(seed: int):
         torch.backends.cudnn.benchmark = False
 
 def main(config: DictConfig):
-    set_seed(config.seed)
-    train_dataloader, val_dataloader, test_dataloader = create_dataloaders(config)
-    
     if type(config.data.kfold_split) == int:
         config.logging.run_name = f"{config.logging.run_name}_fold{config.data.kfold_split}"
+    else:
+        set_seed(config.seed)
+    train_dataloader, val_dataloader, test_dataloader = create_dataloaders(config)
+    
     checkpoint_name = config.logging.run_name
     checkpoint_name += "{epoch}-{step}"
     if config.inference.generate_with_predict and config.data.split_ratio != 1.0:
