@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import sys
 import warnings
+import time
 
 import numpy as np
 import random
@@ -34,6 +35,8 @@ def main(config: DictConfig):
     set_seed(config.seed)
     train_dataloader, val_dataloader, test_dataloader = create_dataloaders(config)
     
+    if type(config.data.kfold_split) == int:
+        config.logging.run_name = f"{config.logging.run_name}_fold{config.data.kfold_split}"
     checkpoint_name = config.logging.run_name
     checkpoint_name += "{epoch}-{step}"
     if config.inference.generate_with_predict and config.data.split_ratio != 1.0:
@@ -70,7 +73,8 @@ def main(config: DictConfig):
     )
     trainer.fit(Text2SQLLightningModule(config), train_dataloader, val_dataloader)
     trainer.test(model=Text2SQLLightningModule(config), ckpt_path=checkpoint.best_model_path, dataloaders=[test_dataloader])
-    gather_and_save(config, trainer) # gather all predictions and save
+    time.sleep(10) # wait for all processes to finish
+    gather_and_save(config, trainer, filter_error_pred=False) # gather all predictions and save
 
 if __name__ == "__main__":
     main(OmegaConf.merge(OmegaConf.load(sys.argv[1]), OmegaConf.from_cli()))

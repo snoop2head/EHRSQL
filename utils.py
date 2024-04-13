@@ -12,7 +12,7 @@ def write_json(path, dictionary):
     with open(path, 'w+') as f:
         json.dump(dictionary, f, indent=4)
 
-def gather_and_save(config, trainer):
+def gather_and_save(config, trainer, filter_error_pred=False):
     # gather all predictions and save
     RESULT_DIR = f"./RESULTS/{config.logging.run_name}"
     DB_PATH = os.path.join('data', config.data.db_id, f'{config.data.db_id}.sqlite')
@@ -23,9 +23,10 @@ def gather_and_save(config, trainer):
     predictions = execute_all(predictions, db_path=DB_PATH, tag='pred')
 
     # iterate in predictions to find "error_pred" value, replace with "null"
-    for k, v in predictions.items():
-        if 'error_pred' in v:
-            predictions[k] = "null"
+    if filter_error_pred:
+        for k, v in predictions.items():
+            if 'error_pred' in v:
+                predictions[k] = "null"
     
     write_json(os.path.join(RESULT_DIR, "predictions.json"), predictions)
     os.system(f"cd {RESULT_DIR} && zip -r predictions.zip predictions.json")

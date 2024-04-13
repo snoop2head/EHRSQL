@@ -1,0 +1,2057 @@
+{
+    "version": "mimic_iv_sample",
+    "data": [
+        {
+            "id": "f0ed8bc2f755ef37eb17af6e",
+            "question": "Did patient 10021938 receive any surgery on their last hospital encounter?"
+        },
+        {
+            "id": "707f754d71d05322bf6f1082",
+            "question": "When did since 04/2100 patient 10000032 take the last microbiology test?"
+        },
+        {
+            "id": "894403f12b36b4f785b9894d",
+            "question": "What were the total number of patients discharged from the hospital in the previous year?"
+        },
+        {
+            "id": "24bf28822b415fe4f9bd906c",
+            "question": "What specimen tests did patient 10038992 undergo for the first time during the first hospital visit?"
+        },
+        {
+            "id": "26ea006536ef99453975ca00",
+            "question": "What was the first time during their last ICU stay patient 10022281 had a maximum arterial blood pressure systolic?"
+        },
+        {
+            "id": "66f0e9afff14db4b814ca058",
+            "question": "When was patient 10004422's last maximum cholesterol, total value on their last hospital encounter?"
+        },
+        {
+            "id": "1938b1fa4edd438feb5ae416",
+            "question": "Tell me the count of other laparoscopic umbilical herniorrhaphy procedures that took place."
+        },
+        {
+            "id": "d1177dfd4cf0c6b2da2111a1",
+            "question": "Give me the total amount of nacl 0.9% given to patient 10039831 since 03/03/2100."
+        },
+        {
+            "id": "02885cc1fb11efec74cb16fd",
+            "question": "When did first patient 10021487 have the maximum value of amylase during this hospital visit?"
+        },
+        {
+            "id": "1013430fc9817f02c815005a",
+            "question": "Tell me the cost of a procedure known as continuous invasive mechanical ventilation for 96 consecutive hours or more."
+        },
+        {
+            "id": "bae6bdda5b9a9cb808040a25",
+            "question": "How much does patient 10019777 weigh difference last measured on the last hospital visit compared to the second to last value measured on the last hospital visit?"
+        },
+        {
+            "id": "2869bb3db5897f9d72d506b0",
+            "question": "What are the five most commonly prescribed medications for patients who were previously diagnosed with other motor vehicle traffic accident involving collision with motor vehicle injuring driver of motor vehicle other than motorcycle within 2 months?"
+        },
+        {
+            "id": "e9f0066c2e5b7c4c2d7fe515",
+            "question": "How many patients had a diagnosis of methicillin susceptible pneumonia due to staphylococcus aureus during this year?"
+        },
+        {
+            "id": "ff89af006f01460431add007",
+            "question": "Tell me the time when patient 10020187's arterial blood pressure mean was less than 91.0 for the first time on 02/03/this year?"
+        },
+        {
+            "id": "05a019fa9f7c243ee7ac5682",
+            "question": "Can you give me the five most common output events since 1 year ago?"
+        },
+        {
+            "id": "f76e82ade10ee685ac166e82",
+            "question": "What's the cost of a procedure named other endovascular procedures on other vessels?"
+        },
+        {
+            "id": "1f02c929b05a2d1eae19aa43",
+            "question": "What was the last time on 03/31/2100 patient 10021666 had a minimum heart rate?"
+        },
+        {
+            "id": "41b9a346811b51fc23501b6f",
+            "question": "What was the first drug prescribed to patient 10037861 via the iv route?"
+        },
+        {
+            "id": "45cf63c5e6579e640cddd3b1",
+            "question": "Can you tell me the last value of the alkaline phosphatase test for patient 10015931 on the first hospital encounter?"
+        },
+        {
+            "id": "e6417dabaf2399efc458a5fd",
+            "question": "How long was temporary tracheostomy taking for patient 78131?"
+        },
+        {
+            "id": "b8f95a496d90e442273b2a33",
+            "question": "What was the last time that patient 10022041 was prescribed acetaminophen iv and phosphorus in 06/2100, at the same time?"
+        },
+        {
+            "id": "271646d4accfbf207929949d",
+            "question": "How long was patient 10038999 in the intensive care unit during their first visit?"
+        },
+        {
+            "id": "327a6b8b85b9df578f97d124",
+            "question": "What's the average monthly number of patients who were diagnosed with chronic or unspecified gastric ulcer with hemorrhage, without mention of obstruction?"
+        },
+        {
+            "id": "082b37e94df8eb086ed09b36",
+            "question": "When are dr. lail's rounds and procedures?"
+        },
+        {
+            "id": "5e2dc38de1c3863efdd5f7b6",
+            "question": "So, what was the last o2 saturation pulseoxymetry of patient 10004733 since 12/30/2100?"
+        },
+        {
+            "id": "88feed4e79da04e646ebc129",
+            "question": "What was the name of the medication that patient 10027602 was last prescribed since 03/2100?"
+        },
+        {
+            "id": "c57560772bbe0f01b4467b62",
+            "question": "Among patients who were diagnosed with calculus of bile duct without mention of cholecystitis, without mention of obstruction, what were the top five most common microbiology tests conducted in the same hospital encounter?"
+        },
+        {
+            "id": "346ee07f02d16abcf7f62e9e",
+            "question": "What is the white blood cells percentile of 12.1 among patients of the same age as patient 10001217 on their last hospital visit?"
+        },
+        {
+            "id": "271c09dde1ad0ae0ce21d6e5",
+            "question": "Can you list patient 10009628's daily maximum weight since 1 year ago?"
+        },
+        {
+            "id": "43ac9cba569c151427df4304",
+            "question": "What did patient 10021666 have last as the output since 03/28/2100?"
+        },
+        {
+            "id": "f483848e8096e4cf24e19ea6",
+            "question": "Does patient 83038 have a family history of any disease?"
+        },
+        {
+            "id": "3932e19e4ed3b0175cec67c4",
+            "question": "Has patient 10007818 had a hospital admission in 2100?"
+        },
+        {
+            "id": "3cfbe0e30b718f625d69a2c5",
+            "question": "When did patient 10013049 get the mcv lab test on the last hospital stay for the last time?"
+        },
+        {
+            "id": "d24509cc1ab0dd341bb53f33",
+            "question": "What was the last sodium chloride 0.9% dose that patient 10022880 was prescribed in 04/this year?"
+        },
+        {
+            "id": "7a94050770d72ccb6594539a",
+            "question": "Can you give me patient 10008454's daily average packed red blood cells input?"
+        },
+        {
+            "id": "88a7f40a049ecb037fdb2016",
+            "question": "What was in 03/this year patient 10004235's minimum alveolar-arterial gradient value?"
+        },
+        {
+            "id": "67a50f9b79bc4e4a7c653ac5",
+            "question": "What are the five most frequent diagnoses that patients were diagnosed within 2 months after having received a excision of dental lesion of jaw procedure?"
+        },
+        {
+            "id": "0874a8eb9ae4f8b6bb50a1d4",
+            "question": "When was patient 10019777 prescribed for the first time a medication via ng route?"
+        },
+        {
+            "id": "935c667c51ade2f8d9a18b79",
+            "question": "Calculate the number of inspection of larynx, via natural or artificial opening endoscopic procedures performed since 2100."
+        },
+        {
+            "id": "fbeef7a4b32462cf2f85c7ab",
+            "question": "And what was the first time patient 10038933 was prescribed medication using the td route?"
+        },
+        {
+            "id": "94b617e6ff37a625db538e00",
+            "question": "During the last hospital encounter, what was the last time patient 10026406 had a medication via the po/ng route prescribed?"
+        },
+        {
+            "id": "ef68de2dc19e6a02e19bace9",
+            "question": "What was the medication that patient 10004733 was prescribed for in the same day after receiving central venous catheter placement with guidance in this hospital visit?"
+        },
+        {
+            "id": "3469a390ac3ba57359927cb1",
+            "question": "What are the current numbers of operating rooms available?"
+        },
+        {
+            "id": "37e1a7e88398803e5188be91",
+            "question": "How many patients stayed on cardiac vascular intensive care unit (cvicu) during the previous year?"
+        },
+        {
+            "id": "2ac19b54bada84606ebec21c",
+            "question": "How many patients in 2100 were prescribed docusate?"
+        },
+        {
+            "id": "af48025f4da1ed8f5c1616e3",
+            "question": "How many hours has it been since the first stay of patient 10004733 in the careunit medicine during this hospital visit?"
+        },
+        {
+            "id": "808756e7c648673865499708",
+            "question": "Show us the top three most common microbiology tests throughout this year."
+        },
+        {
+            "id": "ff7a73799c6e2d08c850edb2",
+            "question": "When did patient 10038999 have the last o2 saturation pulseoxymetry to be less than 99.0?"
+        },
+        {
+            "id": "47769e56a386699d3ce1b553",
+            "question": "On 10/22/this year, what was the average value of the arterial blood pressure diastolic for patient 10031757?"
+        },
+        {
+            "id": "bebd7cec45abb76dc9e4534c",
+            "question": "What was a drug that patient 10001217 was prescribed for within the same hospital visit after receiving central venous catheter placement with guidance in this month?"
+        },
+        {
+            "id": "d84c6c7fe6daa03fe7f81c8b",
+            "question": "In 2100, how many patients underwent insertion of endotracheal tube during the same month after the diagnosis of acute kidney failure, unspecified?"
+        },
+        {
+            "id": "2ec629533542b2728526464a",
+            "question": "What is the ward id that patient 19175 may be admitted?"
+        },
+        {
+            "id": "122e9c77f038fff730af3012",
+            "question": "How many patients were discharged from hospitals since 1 year ago?"
+        },
+        {
+            "id": "5abb89ffecbb35ddc1f5b163",
+            "question": "How much does vancomycin oral liquid cost?"
+        },
+        {
+            "id": "e44cd0b41cda6c3cab6b967e",
+            "question": "How many hours have elapsed since patient 10018081 stayed in the careunit emergency department for the last time on this hospital stay?"
+        },
+        {
+            "id": "fe47357d4996af8b8acb6162",
+            "question": "What is the name of the medication that was prescribed to patient 10004422 for the last time via the po route in 01/2100?"
+        },
+        {
+            "id": "c26e31b284f5bd28c5239fc8",
+            "question": "Tell me the name of the drug which patient 10021487 was prescribed within 2 days after having had a closed [endoscopic] biopsy of bronchus procedure since 9 months ago?"
+        },
+        {
+            "id": "49d67bd02206d97d3d669508",
+            "question": "What is a checklist before lumb/lmbosac fus ant/ant?"
+        },
+        {
+            "id": "cfc537434f52b06b620d9254",
+            "question": "What is the minimum total expenditure of a hospital that involves the medication clarithromycin since 2100?"
+        },
+        {
+            "id": "86b89408e0c371c3b286ba53",
+            "question": "How much does patient 10006580's arterial blood pressure systolic differ from the last value measured on the last ICU visit compared to the first value measured on the last ICU visit?"
+        },
+        {
+            "id": "7f9576332062c59f8d3332f3",
+            "question": "How much does patient 10021118 weigh based on the last measurement since 13 months ago?"
+        },
+        {
+            "id": "857cc6b19c502ce2ba6b66df",
+            "question": "When did patient 10020740 have the minimum lipase value for the first time?"
+        },
+        {
+            "id": "f11bfe4033fc6ace5d5cf382",
+            "question": "Did patient 10021312 receive any destruction of left main bronchus, via natural or artificial opening endoscopic treatment in the previous year?"
+        },
+        {
+            "id": "69b677906abcc409eb49619a",
+            "question": "Show me the top four most frequent diagnoses."
+        },
+        {
+            "id": "b88f292ca552b0ea6d9929d1",
+            "question": "During the last hospital visit, did patient 10037861 receive a right heart cardiac catheterization treatment?"
+        },
+        {
+            "id": "55106da0f8f7722ca97968ca",
+            "question": "What was the first time patient 10004733 received ph in a lab test in 12/this year?"
+        },
+        {
+            "id": "b0e746871a7c5eea41ef06b4",
+            "question": "Inform me about the total amount of patient 10006580's input since 05/02/2100."
+        },
+        {
+            "id": "fb7a0f8c9dc16e058b2fa6fb",
+            "question": "What was the first drug prescribed since 07/2100 to patient 10039708 via the td route?"
+        },
+        {
+            "id": "f25132faa310ec15ed1ccd71",
+            "question": "Is patient 32168 in the family of a person with react-indwell urin cath?"
+        },
+        {
+            "id": "aaf91eb8b0e07ca7c1f6f69b",
+            "question": "During a blood transfusion has patient 18866 ever experienced any side effects?"
+        },
+        {
+            "id": "b9e7f10e8737b4fd67bc29db",
+            "question": "Calculate the number of medicines that patient 10010471 was prescribed since 13 months ago."
+        },
+        {
+            "id": "0ae32bee1adc6a16d66b16de",
+            "question": "What was patient 10036156's documented weight on the last record since 12 months ago?"
+        },
+        {
+            "id": "5768b3ec354138c3fd79bb7f",
+            "question": "What is the maximum total hospital cost for a patient suffering from acute edema of lung, unspecified since 1 year ago?"
+        },
+        {
+            "id": "3b483bc7971f9931801a356e",
+            "question": "What are the top four commonly ordered treatments for patients in their 40s in this year?"
+        },
+        {
+            "id": "e4acdfd7e606457543a76b74",
+            "question": "Will patient 7165 be provided with any additional urine,kidney test?"
+        },
+        {
+            "id": "1a52e19cc4c2bea04555d722",
+            "question": "What was patient 10035185's yearly maximum weight?"
+        },
+        {
+            "id": "bd3f5f6c3bbd8425f3cceaf4",
+            "question": "What was the last time in 03/this year patient 10019777 had the maximum absolute monocyte count."
+        },
+        {
+            "id": "dfccc4c30c3f95895ce45f39",
+            "question": "What was the last instance when the arterial blood pressure diastolic of patient 10026354 was greater than 71.0, since 08/10/2100?"
+        },
+        {
+            "id": "ccd4ae9fb1563f40af3d1761",
+            "question": "What is the maximum total hospital cost for a procedure involving (aorto)coronary bypass of four or more coronary arteries since 2100?"
+        },
+        {
+            "id": "7c1e5985e0e94a843e2c335a",
+            "question": "What specimen test was given since 08/2100 to patient 10007795 for the last time?"
+        },
+        {
+            "id": "65026ec4c48a494f09194273",
+            "question": "Retrieve the top three most frequent lab tests in 2100."
+        },
+        {
+            "id": "f2c797d917998a34e0ec7de5",
+            "question": "Do you think patient 29540 is subject to covid-19 testing?"
+        },
+        {
+            "id": "e28ceb0ac6e10e4e5f14b4dd",
+            "question": "What are the methods for taking ferrous sulfate (liquid)?"
+        },
+        {
+            "id": "e60031fe0c3c45aa32032148",
+            "question": "Could you list the top five most common lab tests?"
+        },
+        {
+            "id": "5e42606ba946ba548d180e31",
+            "question": "List the top four most frequent lab tests since 2100."
+        },
+        {
+            "id": "8683f07aa65fa12c04532cd7",
+            "question": "What were the top five most common procedures that occurred within the same month for patients who had central venous catheter placement with guidance before in 2100?"
+        },
+        {
+            "id": "cae94b9b74b0ff5b8f016878",
+            "question": "For patients who undertook dilation of lower esophagus with intraluminal device, via natural or artificial opening endoscopic within the same hospital visit, what are the top three most frequent specimens tested afterward this year?"
+        },
+        {
+            "id": "519ec63fd6ee4ba4f86c8048",
+            "question": "Can you tell me when patient 10007928 had their first blood culture microbiology test in 04/2100?"
+        },
+        {
+            "id": "e720394bdbfa2cd55a520dc3",
+            "question": "After getting diagnosed with depressive disorder, not elsewhere classified, how many patients were found to have asymptomatic human immunodeficiency virus [hiv] infection status within 2 months since 2100?"
+        },
+        {
+            "id": "909212b3de8ea34ca2c96475",
+            "question": "Is the value of arterial blood pressure diastolic of patient 10004235 second measured on the last ICU visit greater than the value first measured on the last ICU visit?"
+        },
+        {
+            "id": "4f0a03f732e95fdcb15376f7",
+            "question": "Calculate the total volume of input for patient 10005817 since 06/23/2100."
+        },
+        {
+            "id": "a198ad9bb3e4705208425f79",
+            "question": "How much is the maximum total cost of a hospital that involves a drug named bisacodyl since 2100?"
+        },
+        {
+            "id": "5a676f9bd9eb81f901577ab1",
+            "question": "Tell me the price of diazepam."
+        },
+        {
+            "id": "0a103802ca827b13141a5a60",
+            "question": "For patient 10018081, how many hours have passed since the last diagnosis with long-term (current) use of anticoagulants in their current hospital encounter?"
+        },
+        {
+            "id": "b2690f1d201d900a6e245a5a",
+            "question": "Tell me what the top three most commonly prescribed drugs are?"
+        },
+        {
+            "id": "3aa3f14b20280118b146135d",
+            "question": "What was the first hematocrit reading during the last hospital visit for patient 10019385?"
+        },
+        {
+            "id": "e3d50b7cc908a38055145b12",
+            "question": "What are the three most commonly prescribed medications for patients who were previously diagnosed with grand mal status within the same month, this year?"
+        },
+        {
+            "id": "44a6d21d8264b4fa98a0113f",
+            "question": "Tell me the price of gemfibrozil."
+        },
+        {
+            "id": "d96399e5245e5a0e11dcf0ff",
+            "question": "What was diagnosed for patient 10003400 the first time on the last hospital encounter?"
+        },
+        {
+            "id": "733f66f03dc1de20e998d218",
+            "question": "How much glucagon was prescribed since 05/2100 for the last time to patient 10020306?"
+        },
+        {
+            "id": "1f1579d6f5886ce1d80398a0",
+            "question": "In this year, what was the last diagnosis for patient 10012552?"
+        },
+        {
+            "id": "b5aedd087997ec2e10bb6736",
+            "question": "Is the glucose value last measured on the first hospital visit in patient 10004235 less than the value from the second to last measurement on the first hospital visit?"
+        },
+        {
+            "id": "81aaa658176632cb934fc8b2",
+            "question": "Has patient 10012853 been given a diagnosis?"
+        },
+        {
+            "id": "ce4f4d6348cd296c4415f38c",
+            "question": "When did patient 10000032 receive a mrsa screen microbiology test for the first time since 03/2100?"
+        },
+        {
+            "id": "6c5ae1376c35e10f1ed23a4e",
+            "question": "What were some of the five common specimen tests given since 2100?"
+        },
+        {
+            "id": "6fe3dc4789e1e411917e33b1",
+            "question": "What is the maximum total hospital cost that involves a procedure called fluoroscopy of multiple coronary arteries using other contrast since 2100?"
+        },
+        {
+            "id": "25c1ae6ee1303d4325b02e56",
+            "question": "When was the last time the heart rate of patient 10018081 registered greater than 73.0 yesterday?"
+        },
+        {
+            "id": "ecbc2ee919ccc6a0dea03692",
+            "question": "What are the top four most frequent medications prescribed within 2 months to the patients in their 60 or above after they were diagnosed with alcohol abuse, unspecified?"
+        },
+        {
+            "id": "40ee187ccec9edfec26c08d6",
+            "question": "When was patient 10007818 prescribed pantoprazole and vial at the same time for the last time?"
+        },
+        {
+            "id": "c3f33ef0036d9efd71c23adc",
+            "question": "What is the cost for the medicine phytonadione?"
+        },
+        {
+            "id": "cb3554b093b08c75d3a8e12d",
+            "question": "Give me the length of stay for patient 10022041 during their first stay in the ICU."
+        },
+        {
+            "id": "8f2bc494dad4b896a4fa2912",
+            "question": "What are the top five most common specimens tested after receiving hemodialysis in the same month in 2100?"
+        },
+        {
+            "id": "f870fc9332fe7c3778488b46",
+            "question": "When was the first time patient 10011398 was prescribed drugs via po on their last hospital encounter?"
+        },
+        {
+            "id": "81882a684bf6449f672dfca5",
+            "question": "When did patient 10006580 get a mrsa screen microbial test for the last time in 08/this year?"
+        },
+        {
+            "id": "74d964eb743c57b2e97f9876",
+            "question": "Have any diagnoses been made for patient 10003400 since 2100?"
+        },
+        {
+            "id": "93d41c56811abbf4da9b30fe",
+            "question": "What was the last time patient 10012552 has had the minimum arterial blood pressure mean?"
+        },
+        {
+            "id": "19c3aaa1bb33be228b47ea7b",
+            "question": "What is the yearly maximum sterile water input for patient 10020740?"
+        },
+        {
+            "id": "5f192a749e3dc5e91eff2fd7",
+            "question": "The value of mch of patient 10004733 was last measured on the current hospital visit greater than second to last measured on the current hospital visit?"
+        },
+        {
+            "id": "216744fcbadbfb5384e8c226",
+            "question": "What are the top four commonly ordered treatments for patients in their 30s in 2100?"
+        },
+        {
+            "id": "bef2c1e139eac11ba6f699ee",
+            "question": "Do you know the minimum albumin value of patient 10002495 on the first hospital encounter?"
+        },
+        {
+            "id": "794da47ae77cd75fe2914cf2",
+            "question": "In the previous year, how many patients underwent a transcatheter embolization for gastric or duodenal bleeding within 2 months after the diagnosis of unspecified essential hypertension?"
+        },
+        {
+            "id": "eb31ac4eb5e1f45dc5b80313",
+            "question": "What was the name of the medicine that was given to patient 10038933 within 2 days post procedure of percutaneous [endoscopic] gastrostomy [peg]?"
+        },
+        {
+            "id": "2dd263172f5bf1ae381c6af1",
+            "question": "What was the insurance for patient 10031404 in the first hospital visit?"
+        },
+        {
+            "id": "017d9aef746962d1c3d9d52e",
+            "question": "When did patient 10027445 last receive a mrsa screen microbiology test since 08/2100?"
+        },
+        {
+            "id": "59d5c57c5c4d6cd299d4ef9f",
+            "question": "When is the earliest appointment for patient 14467 for other departments?"
+        },
+        {
+            "id": "fcf30c1dc6ce58162c86998c",
+            "question": "What was the five most common microbiology test conducted in this year?"
+        },
+        {
+            "id": "193a8bd008df2bc9ae99adf8",
+            "question": "What are the top five most frequently prescribed drugs in this year?"
+        },
+        {
+            "id": "567c419acd4847f820befc6f",
+            "question": "How many people were diagnosed with depressive disorder, not elsewhere classified in 2100?"
+        },
+        {
+            "id": "d28d6593912738578589157f",
+            "question": "What is the percentile of 80.0 in the ferritin lab test with the same age as patient 10002428 on the last hospital encounter?"
+        },
+        {
+            "id": "7969f7d2ccbf30677bc75d82",
+            "question": "What is patient 10008454's difference in o2 saturation pulseoxymetry from the value measured at 2100-12-07 16:00:00 compared to the value measured at 2100-12-07 15:00:00?"
+        },
+        {
+            "id": "73258d39210839a6422aac92",
+            "question": "When was patient 10024043's first discharge since 2100 from the hospital?"
+        },
+        {
+            "id": "bf5bcab70691ac8bee4b23a3",
+            "question": "Can you tell me the id of patient 1372's ward that he or she may be admitted to?"
+        },
+        {
+            "id": "3658db3e1651d577b0730f29",
+            "question": "Show me the top five most frequent output instances."
+        },
+        {
+            "id": "83ee51e6e7fdc992ab579780",
+            "question": "What was the drug prescribed to patient 10027602 for the last time via the pr route?"
+        },
+        {
+            "id": "b90455e3cd10a2bcfe8f3419",
+            "question": "What were the four frequent output events that occurred since 1 year ago?"
+        },
+        {
+            "id": "2a21e251ed3b120d205aa09a",
+            "question": "When was patient 10035185's first input time since 04/13/2100?"
+        },
+        {
+            "id": "55c7172525f47f43ab6b752a",
+            "question": "What percentile does a alanine aminotransferase (alt) value of 55.0 for patient 10007818 place in today in the first hospital visit?"
+        },
+        {
+            "id": "583645b19b83246b4e37528d",
+            "question": "What new drugs are prescribed for patient 10018081 today compared to yesterday?"
+        },
+        {
+            "id": "c871c7a5d78c361289609381",
+            "question": "What was the name of the medicine prescribed to patient 10037861 for the last time since 8 months ago?"
+        },
+        {
+            "id": "db74cd1a2f794e17f35ddec4",
+            "question": "When was patient 10021666 last mrsa screen microbiologic test?"
+        },
+        {
+            "id": "db710bbbad258467ce5d73b8",
+            "question": "What was the name of the specimen given to patient 10011398 for the first time in the last hospital visit?"
+        },
+        {
+            "id": "eb6a1301664df928ab91d795",
+            "question": "What were the first ptt values of patient 10039831?"
+        },
+        {
+            "id": "b4ca4b338d97b7278100eed6",
+            "question": "When was the last time when patient 10026354 was prescribed iso-osmotic sodium chloride and 0.9% sodium chloride (mini bag plus) at the same time?"
+        },
+        {
+            "id": "848a65292fc28285ffa82551",
+            "question": "Please calculate the total output for patient 10022017 since 06/06/2100."
+        },
+        {
+            "id": "c7913f24b079937963ea9f4f",
+            "question": "What was the total number of patients on vascular in this year?"
+        },
+        {
+            "id": "07d28012648c5a33f74fb154",
+            "question": "What were the three most common tests conducted on specimens since 2100?"
+        },
+        {
+            "id": "1d73f76e9729625f5d313029",
+            "question": "Is the white blood cells level of patient 10001725 last measured on the first hospital visit less than the first measurement on the first hospital visit?"
+        },
+        {
+            "id": "45d81fe4cd05b27444d9f58e",
+            "question": "What does a procedure under the name coronary arteriography using two catheters cost?"
+        },
+        {
+            "id": "1757227b484201499ac650b9",
+            "question": "Has patient 10022041 received a laboratory test for vitamin b12?"
+        },
+        {
+            "id": "9c8ce6af25252e8b181f8ea9",
+            "question": "Is there any genetic test that patient 53392 received?"
+        },
+        {
+            "id": "ba7f88a5002e6408a7156eed",
+            "question": "When did patient 10021487 first get the rapid respiratory viral screen & culture's microbiology test since 12/2100?"
+        },
+        {
+            "id": "d518a22ef06007a9c93db34b",
+            "question": "Count the number of patients during the last year who received a introduction of other therapeutic substance into peripheral artery, percutaneous approach procedure."
+        },
+        {
+            "id": "fdd1695a1c8a50679d56e863",
+            "question": "What was the name of the drug that patient 10022017 was first prescribed?"
+        },
+        {
+            "id": "338a9d532066c9b092d97b39",
+            "question": "Patient 10018328's age on their first hospital encounter was what?"
+        },
+        {
+            "id": "a544c5a0f893e479f14079f0",
+            "question": "What was the total number of input patient 10018081 has received since 11/20/2100?"
+        },
+        {
+            "id": "2706ea1872fb85222790f131",
+            "question": "What are the four most frequent diagnoses that patients were diagnosed within 2 months after having received a simple excision of other lymphatic structure procedure since 1 year ago?"
+        },
+        {
+            "id": "e447bf35d8f5b5f515e7b40e",
+            "question": "What is the minimum daily number of patients diagnosed with closed fracture of dorsal [thoracic] vertebra without mention of spinal cord injury since 2100?"
+        },
+        {
+            "id": "f7778f20f71116c2c62f29b8",
+            "question": "Calculate the sum of patient 10020944's input on 03/14/this year."
+        },
+        {
+            "id": "c7cc1c1c0a6dfab998b9a573",
+            "question": "What is the maximum total hospital cost that includes a procedure named restriction of left internal carotid artery with intraluminal device, percutaneous approach since 2100?"
+        },
+        {
+            "id": "5c8d918b88b696fa22b10f23",
+            "question": "What are the four most common prescriptions in 2100?"
+        },
+        {
+            "id": "9d3038ee311cade2b5621bce",
+            "question": "What are the methods for taking metformin xr (glucophage xr)?"
+        },
+        {
+            "id": "aa9cf98a6cfcfc591fd1d744",
+            "question": "What is the maximum yearly number of patients affected by other specified hypotension?"
+        },
+        {
+            "id": "08f5481de0c251a808376406",
+            "question": "During the last hospital encounter, what was the insurance plan of patient 10015931?"
+        },
+        {
+            "id": "c1a661557ac7c238626ba6d2",
+            "question": "What was the count of patients who were tested for base excess?"
+        },
+        {
+            "id": "35ed250e4f509e49e30cba17",
+            "question": "Could you tell me the sex of patient 10002930?"
+        },
+        {
+            "id": "1e43adf0cab50573f8e61e90",
+            "question": "What was the first thing patient 10021312 had as output since 03/11/2100?"
+        },
+        {
+            "id": "7a6b657fddbeb52ba6d8450c",
+            "question": "Show me the top three most common diagnoses of patients with age 30s during this year."
+        },
+        {
+            "id": "0dcdf1950d75981036938d0f",
+            "question": "The value of hyaline casts of patient 10038992 was last measured on the last hospital visit less than first measured on the last hospital visit?"
+        },
+        {
+            "id": "77171e5339f4e6ec2c3775b4",
+            "question": "When and where are the rounds and procedures of dr. canpos?"
+        },
+        {
+            "id": "2c4e5ef20f7bc4bff7aa7301",
+            "question": "Has any organism been found in patient 10021487's last sputum test conducted in 12/this year?"
+        },
+        {
+            "id": "2b2a1cb7c1f3e55513ccdcd8",
+            "question": "Since 2100, what was the top five most frequent diagnoses patients were diagnosed with during the same month after receiving extracorporeal circulation auxiliary to open heart surgery?"
+        },
+        {
+            "id": "15f5e817e7a5d3115e1563e0",
+            "question": "Get me patient 10005817's total output volume since 03/12/2100."
+        },
+        {
+            "id": "42caec4ca4a8bdfb2bf0e159",
+            "question": "How many patients were given a creatinine lab test in 2100?"
+        },
+        {
+            "id": "859209cc1095a8b3c738cbf9",
+            "question": "What the code that refers to icd-11 for senile dementia uncomp in icd-10?"
+        },
+        {
+            "id": "bf92f3517b92ea00dda6f1a7",
+            "question": "Have patient 96429s ever suffered any side effects from blood transfusions?"
+        },
+        {
+            "id": "22386e52d5ee964fb29ac28b",
+            "question": "Calculate the total quantity of output of patient 10004235."
+        },
+        {
+            "id": "b2c6cc35d97bfeb053d31e00",
+            "question": "Tell me the type of blood of patient 31854?"
+        },
+        {
+            "id": "350181bd71c310c99e34da39",
+            "question": "What is the difference between weights second measured on the first hospital visit compared to the first value measured on the first hospital visit for patient 10008454?"
+        },
+        {
+            "id": "0b6fdd611c6420db2abe5181",
+            "question": "Is patient 3273 aware of any ill effects of blood transfusion?"
+        },
+        {
+            "id": "b661bb18d48da0b0b3f54277",
+            "question": "Since 2100, how many patients required amitriptyline?"
+        },
+        {
+            "id": "92aecb340f32cbe52b7ba345",
+            "question": "What are the precautions to take after the opn/oth rep mtrl vlv-tis procedure?"
+        },
+        {
+            "id": "ecd2a10f46954975185155af",
+            "question": "What was during the last month patient 10038992's minimum alanine aminotransferase (alt) value?"
+        },
+        {
+            "id": "fbd014c02af79a2d9c53a9d0",
+            "question": "When was the first time patient 10038999 was prescribed a medication in 05/this year via the iv route?"
+        },
+        {
+            "id": "d3085358f26b085a3251d71d",
+            "question": "Count the number of patients who were given the indomethacin since 1 year ago."
+        },
+        {
+            "id": "692d3013b67039704bfb1551",
+            "question": "What was the total amount of output from patient 10021312 since 252 days ago?"
+        },
+        {
+            "id": "4427214f9dad701c3ccb0f3a",
+            "question": "When did patient 10003046 last have their maximum o2 saturation pulseoxymetry in the last ICU stay?"
+        },
+        {
+            "id": "0f0a1891025fdcedc7e8ea0d",
+            "question": "Tell me the name of the specimen test that patient 10000032 first received since 07/2100?"
+        },
+        {
+            "id": "652d19150532597e8cba1e58",
+            "question": "Has patient 10020306 been given any diagnosis since 2100?"
+        },
+        {
+            "id": "ac5dd63a7a7e12dbdb8de9e2",
+            "question": "Was patient 10005817 given any sort of diagnosis on the first hospital visit?"
+        },
+        {
+            "id": "a9d61cc491cc934c6edf1a8c",
+            "question": "Compared to yesterday, what are the new prescriptions for patient 10018081 today?"
+        },
+        {
+            "id": "1403522fcefbc7af92918f1c",
+            "question": "What was the drug that patient 10019385 was prescribed with within the same day after the performance of cardiac output, continuous in 03/2100?"
+        },
+        {
+            "id": "11b1d4acc1e68f70deb1fd99",
+            "question": "What is the total number of patients who underwent fiber-optic bronchoscopy throughout this year?"
+        },
+        {
+            "id": "db408655e01275e4bcc8c7bc",
+            "question": "Is the patient 10021666 a male or female?"
+        },
+        {
+            "id": "46a747d7b9992bd3eae9d736",
+            "question": "Did patient 10022880 get a diagnosis during the first hospital visit?"
+        },
+        {
+            "id": "6716a47fafd5bf2d15dae0e8",
+            "question": "Has patient 10005866 gone through any procedure this year?"
+        },
+        {
+            "id": "f46e8931e74e00facf2ddbd7",
+            "question": "Could you tell me how many patients stayed in the neuro surgical intensive care unit (neuro sicu) careunit during this year?"
+        },
+        {
+            "id": "11f17f3d6fad511b3db76b80",
+            "question": "What is the cost of a diagnosis of automatic implantable cardiac defibrillator in situ?"
+        },
+        {
+            "id": "a6b9ade99c3cfb9b0eddcbec",
+            "question": "In 2100, how many patients received fluoroscopy of multiple coronary arteries using other contrast within the same hospital visit after being diagnosed with severe sepsis with septic shock?"
+        },
+        {
+            "id": "9f9db02efbdc2ea5168b658f",
+            "question": "Show the respiratory rate changes of patient 10031757 measured at 2100-10-26 21:00:00 compared to the value measured at 2100-10-26 20:00:00?"
+        },
+        {
+            "id": "2e302933ba1ba62f25b09b46",
+            "question": "Calculate the number of prescribed drugs for patient 10022880 since 19 months ago."
+        },
+        {
+            "id": "ff9d739f6aef4f0e6a4fad34",
+            "question": "What are the five most common laboratory tests undertaken by patients in the same month following a diagnosis of personal history of other venous thrombosis and embolism since 1 year ago?"
+        },
+        {
+            "id": "408218a9af14aa7ec6f3f966",
+            "question": "How much does it cost for ondansetron?"
+        },
+        {
+            "id": "f1c637616d0c91843526eb96",
+            "question": "List the five most frequent diagnoses a patient was diagnosed with within 2 months after receiving dilation of left main bronchus with intraluminal device, via natural or artificial opening endoscopic."
+        },
+        {
+            "id": "6af5326ec076b32f85b4e657",
+            "question": "How much is the cost of the encounter for palliative care diagnosing?"
+        },
+        {
+            "id": "13a52294c412fbfa45d556fd",
+            "question": "Does patient 69895 have a genetic test that they got?"
+        },
+        {
+            "id": "b78c0434ecf85c58970b853d",
+            "question": "What is the cost of a diagnosis of long term (current) use of anticoagulants?"
+        },
+        {
+            "id": "368dc6fa47ea7885905c48d5",
+            "question": "How is olanzapine (disintegrating tablet) taken?"
+        },
+        {
+            "id": "0701efc3cee472e4cbd0c350",
+            "question": "When are dr. davis's rounds and procedures?"
+        },
+        {
+            "id": "d199f2338fccc1376de62441",
+            "question": "How much will it cost me to get other repair of vessel done?"
+        },
+        {
+            "id": "08340a221ca994ccd5c38898",
+            "question": "When is the earliest of patient 7400's next visit to other departments?"
+        },
+        {
+            "id": "781ef8abeed146047598411d",
+            "question": "Can you tell me how many extracorporeal circulation auxiliary to open heart surgery procedures were done in 2100?"
+        },
+        {
+            "id": "44b000c0c7e63ce369e8fcb0",
+            "question": "Can you tell me if patient 10039997 is male or female?"
+        },
+        {
+            "id": "8694ace52a01f31ca53cc69a",
+            "question": "When has patient 10000032 been given urea nitrogen test for the first time in 08/2100?"
+        },
+        {
+            "id": "cc2dcf3bb997c63533f8349f",
+            "question": "What was the drug that patient 10021118 prescribed for within 2 days after the procedure of bypass coronary artery, two arteries from coronary artery, open approach since 03/2100?"
+        },
+        {
+            "id": "e94967759cb45a5c074573d6",
+            "question": "Has patient 10024043 been given any sort of diagnosis during this year?"
+        },
+        {
+            "id": "0156bbc7fa6f2c54a9587d76",
+            "question": "How much does patient 10020187's weight differ from the last value measured on the first hospital visit compared to the first value measured on the first hospital visit?"
+        },
+        {
+            "id": "2760ec29711e48dd4fbb1d5e",
+            "question": "Has patient 10007818 gone through a urea nitrogen, urine test in 10/last year?"
+        },
+        {
+            "id": "240b36c04ba129e0ec06c297",
+            "question": "Tell me the maximum total hospital cost that involves cellulitis and abscess of trunk since 2100."
+        },
+        {
+            "id": "93c82ad0f967afa872fe9570",
+            "question": "What was the last time that patient 10031757 had a maximum arterial blood pressure systolic since 92 days ago?"
+        },
+        {
+            "id": "cf07a721765b700935e376f5",
+            "question": "How much is the difference of basophils of patient 10038992 last measured on the first hospital visit compared to the first value measured on the first hospital visit?"
+        },
+        {
+            "id": "dc21479affad398d7e20b2da",
+            "question": "Was there any nacl 0.9% given to patient 10010471 on 12/15/2100?"
+        },
+        {
+            "id": "32add9759f1cb2aad3668ce7",
+            "question": "List the top four most common events that happened."
+        },
+        {
+            "id": "2977de037421f92addee92ab",
+            "question": "What is the total volume of patient 10021487's input on 12/22/this year?"
+        },
+        {
+            "id": "3b531345189c04192cda9aad",
+            "question": "What genetic test did patient 70234 undergo?"
+        },
+        {
+            "id": "2add4b6f52a7f92255a99795",
+            "question": "Could you list patient 10021938's daily average weight since 07/2100?"
+        },
+        {
+            "id": "77b6bd619a1302c0e9f16e66",
+            "question": "What was the drug that was last prescribed to patient 10039708 via the ih route since 08/2100?"
+        },
+        {
+            "id": "1ca13ce347fd46ac69499979",
+            "question": "What was diagnosed for patient 10037928 the first time in their first hospital visit?"
+        },
+        {
+            "id": "a535d7ccf9ef36b4680fc9eb",
+            "question": "Patient 15209 is subject to covid-19 testing"
+        },
+        {
+            "id": "4ad4465cd7b99c50bc48d1df",
+            "question": "Count the number of current patients whose ages fall within the 50s."
+        },
+        {
+            "id": "b84f8bef2656a98e1a21f179",
+            "question": "What is the percentile of 42.0 in the laboratory test with platelet count at the same age of patient 10000032 in the first hospital visit?"
+        },
+        {
+            "id": "5182aaa70c734958ef8e43ba",
+            "question": "Since 10/2100, when did patient 10038992 last get prescribed vitamin d and felodipine at the same time?"
+        },
+        {
+            "id": "4d0cbd90ae58506f9467785f",
+            "question": "When was the last time that patient 10001725 was tested for eosinophils on their first hospital encounter?"
+        },
+        {
+            "id": "3897e55dfcc80af6c9948c75",
+            "question": "Has patient 10015860 had a lab test done since 1 year ago?"
+        },
+        {
+            "id": "48bc5f792f4ed6f03d3cb9e5",
+            "question": "How much sevelamer carbonate was given to patient 10007818 for the first time in 06/2100?"
+        },
+        {
+            "id": "c916df49979cb247be8c50a6",
+            "question": "Give me the total volume of output for patient 10039831 since 01/19/2100."
+        },
+        {
+            "id": "68d2cf8d2fa30727fc51e480",
+            "question": "Tell me the five most frequent medical diagnoses throughout this year."
+        },
+        {
+            "id": "631830633e3ef0505c85ca98",
+            "question": "Calculate the total number of medications that patient 10004457 was prescribed throughout this year."
+        },
+        {
+            "id": "c578a495c2dae5a5b4a612bd",
+            "question": "Can you get me the top five most conducted lab tests in 2100?"
+        },
+        {
+            "id": "0d8dbb180db73cb98f531c2d",
+            "question": "Tell me the top four most common specimens tested since 1 year ago."
+        },
+        {
+            "id": "2c36fe674f06fe07c1c1b71d",
+            "question": "Is the value of anion gap of patient 10015272 last measured on the last hospital visit less than the value first measured on the last hospital visit?"
+        },
+        {
+            "id": "78deb17fb4b0f07c1c1b0051",
+            "question": "How many medications were assigned to patient 10004422 in the previous year?"
+        },
+        {
+            "id": "97da967a6eec6c3d02e10772",
+            "question": "In 2100, how many dilation of left external iliac vein with intraluminal device, percutaneous approach procedures were there?"
+        },
+        {
+            "id": "b1ee8ce4305d98f2883b695b",
+            "question": "How many patients were diagnosed in 2100 with intestinal infection due to other organism, not elsewhere classified?"
+        },
+        {
+            "id": "2559181f4a14ba86cf190ad5",
+            "question": "I would like to know the top three diagnoses that have the highest 6-month mortality rate."
+        },
+        {
+            "id": "92672fa0de871a17570f6c7b",
+            "question": "Tell me patient 10003046's total gastric meds input amount on 01/16/this year."
+        },
+        {
+            "id": "dbb22b767c34f1cecea22ea4",
+            "question": "What are the four most commonly prescribed medications for patients who were diagnosed with facial weakness previously within 2 months, in 2100?"
+        },
+        {
+            "id": "e1e117c17a8d654329d349cf",
+            "question": "Give me the top three most frequent treatments patients received within 2 months after being diagnosed with other abnormal glucose in 2100."
+        },
+        {
+            "id": "56fd4c77a08d2c69466f3daf",
+            "question": "How is readi-cat 2 (barium sulfate 2% suspension) typically consumed?"
+        },
+        {
+            "id": "b4067b5953f2f9bf38f0cf12",
+            "question": "How many patients in 2100 were diagnosed with body mass index 35.0-35.9, adult within 2 months after the first diagnosis with anemia, unspecified?"
+        },
+        {
+            "id": "934088633430fb5451e8191e",
+            "question": "What was the last measured value of heart rate for patient 10018423 since 289 days ago?"
+        },
+        {
+            "id": "3b0e6898490e151ff0c9d63d",
+            "question": "Calculate the number of patients with other ventral hernia without mention of obstruction or gangrene who were diagnosed."
+        },
+        {
+            "id": "1c91054ab8b9cc71f46ad1dd",
+            "question": "Since 2100, how many patients were diagnosed with type 2 diabetes mellitus with diabetic polyneuropathy?"
+        },
+        {
+            "id": "d057e51f0d7e855faf330871",
+            "question": "How long was patient 10029291's last stay in the intensive care unit?"
+        },
+        {
+            "id": "8794ed581e861d00471884fd",
+            "question": "How many patients were discharged during the last year from hospital?"
+        },
+        {
+            "id": "d2dd4d4753286d5a02aee69a",
+            "question": "Tell me the minimum total cost of a hospital visit involving a alanine aminotransferase (alt) lab test in 2100?"
+        },
+        {
+            "id": "648035b87d03c40993442aeb",
+            "question": "On the current hospital visit, how many hours have passed since patient 10018081's first diagnosis of abnormal coagulation profile?"
+        },
+        {
+            "id": "1c5f16182f446c154f204081",
+            "question": "When, , was the first time patient 10031404 was prescribed a medication via the iv route?"
+        },
+        {
+            "id": "c321346f08463a3979f09efe",
+            "question": "What was the accumulated output for patient 10004733 since 10/26/2100?"
+        },
+        {
+            "id": "fb100dfee04065d29677af93",
+            "question": "Tell me the last output of patient 10016742 on 07/22/2100?"
+        },
+        {
+            "id": "7793a26811956045c0aad41d",
+            "question": "For patients who were diagnosed with acute venous embolism and thrombosis of subclavian veins , what are the top four most common medications that followed afterward during the same hospital visit?"
+        },
+        {
+            "id": "ddaecde2d7500bcb038b6060",
+            "question": "Tell me, was lr given to patient 10013049 on 06/23/2100?"
+        },
+        {
+            "id": "ce36c547c1a37852e65fc5c3",
+            "question": "Can you get me the top four diagnoses that have the highest 6-month mortality rate?"
+        },
+        {
+            "id": "f0229fb196610726d6ec7c44",
+            "question": "How many times was other excision or destruction of lesion or tissue of pancreas or pancreatic duct carried out since 2100?"
+        },
+        {
+            "id": "3c11cf08e04cd8e55787eb1f",
+            "question": "What was the last time patient 10009035 had a mrsa screen microbiology test in 05/this year?"
+        },
+        {
+            "id": "412c09bd6869eec57b61b8ab",
+            "question": "What are the top five most frequent microbiology tests in 2100?"
+        },
+        {
+            "id": "e1a802bbddcfa313978c2d4b",
+            "question": "Can you get me the top four diagnoses that have the highest 3-month mortality rate?"
+        },
+        {
+            "id": "51f451ef32c9bcc8c27f43e9",
+            "question": "How much does patient 10027602 change in weight second measured on the first hospital visit compared to the first value measured on the first hospital visit?"
+        },
+        {
+            "id": "e8433f2ef9b3e709b1fe04cf",
+            "question": "Count the number of people who were diagnosed with other disorders of muscle, ligament, and fascia since 2100."
+        },
+        {
+            "id": "f370a107576540264d73906f",
+            "question": "Can you confirm the gender of patient 10015931?"
+        },
+        {
+            "id": "a3279eb9747f960bcb7b62b6",
+            "question": "What percentile is 16.5 white blood cells in a patient of the same age as patient 10031757 on the last hospital encounter?"
+        },
+        {
+            "id": "72be988adaa416d79f2d4060",
+            "question": "What was patient 10009628's heart rate for the first time during their last ICU visit?"
+        },
+        {
+            "id": "c04f16fa062bc81f8c917962",
+            "question": "When did patient 10010471 first take the microbiology test?"
+        },
+        {
+            "id": "f40df2dfe181bd4a634173c9",
+            "question": "What is the prescribed opioid dose for patient 739?"
+        },
+        {
+            "id": "4bb1514c5befb0ece60fdb11",
+            "question": "Has there been any organism found in patient 10020740's last sputum microbiology test in 04/2100?"
+        },
+        {
+            "id": "0af1a06bcce4aacbc5a936f4",
+            "question": "Has patient 10008454 acquired any medication since 10/2100?"
+        },
+        {
+            "id": "7f1962fd85f2cf85e167d1a0",
+            "question": "What was the admission type for patient 10027445's first entry into the hospital in 2100?"
+        },
+        {
+            "id": "e07bc2b8ae12376224aac0c9",
+            "question": "Tell me the top three most prevalent procedures for patients aged 40s since 2100."
+        },
+        {
+            "id": "6408991bd45a8b1bed727d8d",
+            "question": "What is the daily minimum input of or packed rbc intake that patient 10005817 is getting since 11/2100?"
+        },
+        {
+            "id": "3018865bd3e3ef7fcede4eb2",
+            "question": "Could you list the five most common specimen tests carried out since 2100?"
+        },
+        {
+            "id": "d1296c6e0fcaaa1292187c95",
+            "question": "When was the last microbiological test of patient 10022281 since 06/2100?"
+        },
+        {
+            "id": "ba956e22bb92d02f3abbcb3c",
+            "question": "How much does phenytoin infatab cost?"
+        },
+        {
+            "id": "81fecc104d9ef8ac42378b81",
+            "question": "Show me the top five most common treatments for patients aged 20s since 2100."
+        },
+        {
+            "id": "7d25ac3b59f8763886afb8a7",
+            "question": "What are the prices of the drug 0.83% sodium chloride?"
+        },
+        {
+            "id": "bc7f43b98bb5ee390c33c345",
+            "question": "When was patient 10007818's arterial blood pressure mean first measured less than 75.0 since 241 days ago?"
+        },
+        {
+            "id": "e8be8d8ac70685f324507cdc",
+            "question": "...when was the last time that patient 60219 had a medication that should be taken regularly?"
+        },
+        {
+            "id": "5dbb876ab254d8863d9a17ce",
+            "question": "What is the daily average input of d5 1/2ns that patient 10022281 is getting during their last ICU stay?"
+        },
+        {
+            "id": "8131eb8d99a9ae08b543fab4",
+            "question": "Has patient 10026255 been tested in the hemoglobin lab in 10/this year?"
+        },
+        {
+            "id": "2616e051ac4579e504b2e48d",
+            "question": "During their first hospital encounter, what was the diagnosis for patient 10004720 the first time?"
+        },
+        {
+            "id": "be2ea8ec1974fc0574f2921f",
+            "question": "Has patient 10021487 had a total nucleated cells, pleural test done in 10/last year?"
+        },
+        {
+            "id": "16daefeea8782307bdc2f5f7",
+            "question": "Provide the daily maximum weight of patient 10031757 since 12 months ago."
+        },
+        {
+            "id": "1697a8cad9b6a471e01ec05a",
+            "question": "What was the name of the organism discovered in the first fluid,other test of patient 10021487 since 9 months ago?"
+        },
+        {
+            "id": "4830ab94fb0c437406b08947",
+            "question": "Since 02/2100, when was patient 10021312's first microbiology test?"
+        },
+        {
+            "id": "a903f7427fcbfe8c1598e7c7",
+            "question": "What was the name of the last specimen test which patient 10027602 has received since 02/2100?"
+        },
+        {
+            "id": "3bbc83c195a74b99b51777c9",
+            "question": "Since 08/2100, when was the last time that patient 10001217 was prescribed medication via the pr route?"
+        },
+        {
+            "id": "06b6972a43b2dba9856ec0bd",
+            "question": "In 2100, what are the top four most frequently tested specimens for patients during the same month after receiving introduction of other therapeutic substance into heart, open approach?"
+        },
+        {
+            "id": "69b4dbcc3e05876c15ab3314",
+            "question": "During what last time in their first hospital encounter did patient 10022880 have the maximum epithelial cells level?"
+        },
+        {
+            "id": "7d276bb7858da3e756c5b278",
+            "question": "Give me patient 10025612's total amount of or crystalloid intake input."
+        },
+        {
+            "id": "c7279aab21fca4862f9c138a",
+            "question": "On the last hospital visit, what was patient 10026406's insurance plan?"
+        },
+        {
+            "id": "0702bc77d929f78085010bb0",
+            "question": "What was the name of the organism that was found during the last pleural fluid test of patient 10021487 during this hospital encounter?"
+        },
+        {
+            "id": "63dc3947dde2cd40f4b0c364",
+            "question": "How much metronidazole (flagyl) had been prescribed to patient 10001217 in total in 12/2100?"
+        },
+        {
+            "id": "68002865c7084ae451a8b103",
+            "question": "Has patient 10026406 gone to an emergency room since 2100?"
+        },
+        {
+            "id": "7fafde7941ee8321b6875326",
+            "question": "Tell me the number of cases of dilation of lower esophagus with intraluminal device, via natural or artificial opening endoscopic that occurred in 2100."
+        },
+        {
+            "id": "a5b1c0e43266c3abbd391cf4",
+            "question": "Tell me the number of patients who were prescribed ferric gluconate since 2100."
+        },
+        {
+            "id": "c7841b68bdb2089ac264a977",
+            "question": "List the top five most common events in 2100."
+        },
+        {
+            "id": "bc72b33b40a0a574955d98e6",
+            "question": "What are the ways to consume metformin (glucophage)?"
+        },
+        {
+            "id": "7fb6c6e5361721f050111d9f",
+            "question": "What was the total volume of foley patient 10022880 had?"
+        },
+        {
+            "id": "2d825ccd2b65ad362114e5dc",
+            "question": "Does patient 19175 have a family history of colostomy status?"
+        },
+        {
+            "id": "b294fc478c483f32414156f0",
+            "question": "What are the top four most common specimens tested after receiving excision of left main bronchus, via natural or artificial opening endoscopic in the same hospital encounter since 2100?"
+        },
+        {
+            "id": "66e4509cc3f44d918845b252",
+            "question": "On the last ICU visit, did patient 10016742 have any input of gastric meds?"
+        },
+        {
+            "id": "74693de7d313f1576fec3036",
+            "question": "When was the first time that patient 10005909 has received a red blood cells lab test since 08/2100?"
+        },
+        {
+            "id": "c89cf055a5d102b539366869",
+            "question": "How many hours has it been since the last time patient 10021487 stayed during this hospital encounter in the careunit emergency department?"
+        },
+        {
+            "id": "7f969459fa4b9cddf822c495",
+            "question": "What are the four frequently prescribed medications for patients diagnosed with septicemia due to escherichia coli [e. coli] previously in the same hospital visit, since 1 year ago?"
+        },
+        {
+            "id": "67aeef950338b9e353377442",
+            "question": "How many hours has it been since patient 10018081's first urinary tract infection, site not specified diagnosis in their current hospital encounter?"
+        },
+        {
+            "id": "190982f3687093b621a95f14",
+            "question": "What's the cost to get drainage of pericardial cavity, percutaneous approach?"
+        },
+        {
+            "id": "d4ffd536638a0b500dea5e1d",
+            "question": "What was the name of the drug patient 10017492 was prescribed within the same hospital visit after having received a spinal tap procedure in 03/this year?"
+        },
+        {
+            "id": "b7829190559539b14c91b592",
+            "question": "Has patient 10037928 had a mch test done since 04/2100?"
+        },
+        {
+            "id": "c4b9d1ad637c92074a327167",
+            "question": "Show me patient 10012552's total amount of dextrose 5% input on 04/05/2100."
+        },
+        {
+            "id": "446ee7d9f8e891fa807c4f29",
+            "question": "How much of a difference is there in patient 10004720's weight last measured on the first hospital visit compared to the second to last value measured on the first hospital visit?"
+        },
+        {
+            "id": "f9b43f1daa9180b4970abafe",
+            "question": "Calculate the total volume of patient 10010471's input since 12/19/2100."
+        },
+        {
+            "id": "35b706cc431e421ccc4d295f",
+            "question": "What's the rank of the top four most common output events?"
+        },
+        {
+            "id": "ecbdf8f66488345ecb0ba8bf",
+            "question": "What drug was patient 10025463 prescribed for during the same day after undergoing catheter based invasive electrophysiologic testing in 11/this year?"
+        },
+        {
+            "id": "10a09034b24ebc5ea1fcd470",
+            "question": "Is the lymphocytes level of patient 10037928 last measured on the last hospital visit less than the first level measured on the last hospital visit?"
+        },
+        {
+            "id": "8236653d88c7fec0c10aeb71",
+            "question": "On the current hospital visit, how many hours have passed since patient 10004733's first diagnosis of blood in stool?"
+        },
+        {
+            "id": "712fa8d3c896982a206d0140",
+            "question": "What is today's outpatient schedule for dr. knight?"
+        },
+        {
+            "id": "4e7054c0bde47479f064c4df",
+            "question": "Has patient 7112 had a family history of a disease?"
+        },
+        {
+            "id": "ed6f8d67b33854602df8651f",
+            "question": "How much is the drug named cepacol (menthol)?"
+        },
+        {
+            "id": "825c5c877128209aef4d391e",
+            "question": "Tell me the cost of a procedure known as excision of right main bronchus, via natural or artificial opening endoscopic, diagnostic."
+        },
+        {
+            "id": "645012622fad2129a6fe1db6",
+            "question": "Since 1 year ago, what was the top three most frequent diagnoses patients were diagnosed with during the same month after receiving extracorporeal circulation auxiliary to open heart surgery?"
+        },
+        {
+            "id": "6b368507937b705eba056861",
+            "question": "What are the five most frequently given lab tests for patients that were diagnosed with family history of malignant neoplasm of breast previously during the same hospital visit, in 2100?"
+        },
+        {
+            "id": "4c5c196bc7d2b79d1ed73ecf",
+            "question": "Has any medication been prescribed to patient 10020786 since 07/2100?"
+        },
+        {
+            "id": "fd8f58682663e3ebe43beab9",
+            "question": "Can you tell me how long patient 10015860 stayed in the ICU during their last stay?"
+        },
+        {
+            "id": "19c5cf83eed23cd4d4228669",
+            "question": "What is today's outpatient schedule with dr. welling?"
+        },
+        {
+            "id": "742e8151840906cdb2000fee",
+            "question": "Tell me the number of cases of extirpation of matter from left lower lung lobe, via natural or artificial opening endoscopic that occurred during this year."
+        },
+        {
+            "id": "03cee97f39a5dbd735cc25ea",
+            "question": "How many patients in 2100 were discharged from the hospital?"
+        },
+        {
+            "id": "96c87d6620403ab5197e010c",
+            "question": "For the last time in 08/this year, what was the drug that patient 10027445 was prescribed via sc route?"
+        },
+        {
+            "id": "f2265be3b7f96b9827e002f2",
+            "question": "What was the total output that patient 10020786 had since 07/01/2100?"
+        },
+        {
+            "id": "5865415c04f5c5aabf620b5e",
+            "question": "When did patient 10029484 last depart from the hospital in 2100?"
+        },
+        {
+            "id": "acb8470937bc4a7d0d9b622d",
+            "question": "Can you confirm the gender of patient 10027602?"
+        },
+        {
+            "id": "32041f1a421a46a1ede56482",
+            "question": "Calculate patient 10029484's total input amount of magnesium sulfate (bolus) on last month/23."
+        },
+        {
+            "id": "c56635619ccd4b7ce64652e4",
+            "question": "Since 09/2100, what amount of fluoxetine was prescribed to patient 10014354?"
+        },
+        {
+            "id": "6e94c2a9ff1a11c41777ecf8",
+            "question": "How much heparin was prescribed to patient 10036156 last since 05/2100?"
+        },
+        {
+            "id": "cac51b303e4b48200febb2a0",
+            "question": "Could you provide the total volume of output for patient 10035185 since 02/02/2100?"
+        },
+        {
+            "id": "cbe81158af8ca0c5186959f0",
+            "question": "Tell me the five most common lab tests since 2100."
+        },
+        {
+            "id": "d80871d283fcf3c937bc3387",
+            "question": "Can you tell me how many fluoroscopy of multiple coronary arteries using low osmolar contrast procedures were done since 2100?"
+        },
+        {
+            "id": "73a651d26844c7e023b2bfc1",
+            "question": "Share the four most frequently performed procedures since 1 year ago."
+        },
+        {
+            "id": "c07d03f18cb3b7eb6a97c463",
+            "question": "Tell me the amount of foley patient 10039831 had since 266 days ago."
+        },
+        {
+            "id": "3890e55b1b0c07ff2b11bb35",
+            "question": "How many hours have it been since patient 10039831 had received a ptt laboratory test during this hospital encounter for the last time?"
+        },
+        {
+            "id": "70d616b224eaa851d86871dd",
+            "question": "Does patient 70206 have a traveling history abroad?"
+        },
+        {
+            "id": "2872894a2d6be289cc0751d3",
+            "question": "Has patient 10005817 undergone a (aorto)coronary bypass of two coronary arteries?"
+        },
+        {
+            "id": "bf14cf17da2349955ab8ea66",
+            "question": "Since 16 months ago, what was the first recorded weight for patient 10038999?"
+        },
+        {
+            "id": "827992b8de480860fb744924",
+            "question": "On the current hospital visit, how many days passed since the first other fluid overload diagnosis of patient 10021487?"
+        },
+        {
+            "id": "7a4312f3777e3813772be85d",
+            "question": "What was the last time of input of patient 10022041?"
+        },
+        {
+            "id": "fabc6fda184e4c3f17a6f07e",
+            "question": "What are the top five most common specimens being tested for patients who were diagnosed with transfusion related acute lung injury (trali) within 2 months since 1 year ago?"
+        },
+        {
+            "id": "725f32d2feda840d1ff1d579",
+            "question": "The last time patient 10021487 was prescribed sodium bicarbonate and 5% dextrose at the same time since 11/2100?"
+        },
+        {
+            "id": "16836caa5b38e5fa22166c1a",
+            "question": "Is the pt level of patient 10027445 last measured on the last hospital visit greater than the second to last measurement on the last hospital visit?"
+        },
+        {
+            "id": "fb56d23182d69a8dbd3d3643",
+            "question": "Can you list the single rooms that are available today?"
+        },
+        {
+            "id": "7101ce2540d2798377dc1ae1",
+            "question": "When since 07/2100 did patient 10018081 get the last microbiology test?"
+        },
+        {
+            "id": "a19797fad6ac2c57326769e0",
+            "question": "In 2100, has patient 10005909 been diagnosed with any illness?"
+        },
+        {
+            "id": "cb29881e7d27f8f23e3a8502",
+            "question": "Give a count of the number of ICU visits of patient 10004720 during their last hospital visit."
+        },
+        {
+            "id": "9c7b53fbe9d379b7315c6ec8",
+            "question": "What was the organism's name found in the last blood culture test of patient 10038999 in the last hospital encounter?"
+        },
+        {
+            "id": "9073e579594a4c3f92dad212",
+            "question": "What were the top five diagnoses most frequently diagnosed in this year?"
+        },
+        {
+            "id": "507c98230efbbf1d84008059",
+            "question": "Is it patient 10003046's o2 saturation pulseoxymetry last measured on the last ICU visit greater than second to last measured on the last ICU visit?"
+        },
+        {
+            "id": "2bdbdd95fe3cb63a5fe57218",
+            "question": "Let me know the total quantity of input patient 10012552 received on 04/06/this year."
+        },
+        {
+            "id": "aa2c37cca4ef58130e2faadd",
+            "question": "Tell me the amount of or urine patient 10019172 had since 11/12/2100."
+        },
+        {
+            "id": "67ea2ec7c02ee83ea4a04d59",
+            "question": "Tell me the total input for patient 10016742 since 07/23/2100."
+        },
+        {
+            "id": "9bc3cce0fc67dc34054bf5dc",
+            "question": "When will patient 92846 be next seen by the hospital?"
+        },
+        {
+            "id": "22a17e0cd02cf807c470a259",
+            "question": "Can you tell me the total volume of pre-admission output for patient 10037975 since 351 days ago?"
+        },
+        {
+            "id": "a6fc04dbbe1e0ba75ba30f18",
+            "question": "What was the organism found in the first bronchoalveolar lavage test of patient 10021487 since 10/2100?"
+        },
+        {
+            "id": "34477f844c8389585cdcabca",
+            "question": "Has there been any organism detected during the first mrsa screen microbiology test of patient 10021118 since 05/2100?"
+        },
+        {
+            "id": "d8493e7bf9c18bcd8edb3a40",
+            "question": "What was the drug that patient 10019777 was prescribed for the first time using a neb route during their last hospital visit?"
+        },
+        {
+            "id": "f53ea28051ef658c6e955c6f",
+            "question": "What percentile is 32.9 on a hematocrit test among patients of the same age as patient 10029291 on the first hospital stay?"
+        },
+        {
+            "id": "ffa10298ec3846d375cbd553",
+            "question": "Let me know the total quantity of input patient 10027602 received since 09/23/2100."
+        },
+        {
+            "id": "6562f562696c0b8ddfd04a29",
+            "question": "Since 1 year ago, has patient 10001217 been at the emergency room?"
+        },
+        {
+            "id": "3fa74c4fb1defa83dd97682b",
+            "question": "What was an insurance plan for patient 10005866 in their last hospital visit?"
+        },
+        {
+            "id": "4be515e40345fb288dd58aa5",
+            "question": "When was the first time of input time of patient 10007818 on 07/10/2100?"
+        },
+        {
+            "id": "91c2a89a059f3c099a994282",
+            "question": "When was the first time patient 10009628 had a medication prescribed via the iv drip route in 10/2100?"
+        },
+        {
+            "id": "9aaa83b804392690737b00fb",
+            "question": "On the current hospital visit, how many hours have passed since patient 10018081's last diagnosis of acute vascular insufficiency of intestine?"
+        },
+        {
+            "id": "c84dfff5f8753a12aab6815f",
+            "question": "What organism was found in patient 10029291's first stool test during their first hospital visit?"
+        },
+        {
+            "id": "78c04c8b0f1650516f78b223",
+            "question": "Provide the length of the last visit for patient 10009035 in the ICU."
+        },
+        {
+            "id": "b20ec30866d7ebccf58fc8d2",
+            "question": "Whats the pre serum transfusion nec checklist?"
+        },
+        {
+            "id": "8bc83605b6ede35754a1e843",
+            "question": "Has there been any organism found in the first microbiological urine test of patient 10021118 in 12/2100?"
+        },
+        {
+            "id": "ea55d009cc63424e1e7ee824",
+            "question": "What are the steps after the cystoscopy nec?"
+        },
+        {
+            "id": "30ed0a6953999ac4024916ae",
+            "question": "What is the minimum total cost of the hospital which involves calculus of kidney?"
+        },
+        {
+            "id": "ffdf7c7b7b7b047429a3497b",
+            "question": "What is the average total hospital expense that includes hemiplegia, unspecified affecting left nondominant side since 1 year ago?"
+        },
+        {
+            "id": "3e94d246a8e0419606fe3122",
+            "question": "When was the last time that patient 10018081 had the minimum value of arterial blood pressure diastolic on 12/29/this year?"
+        },
+        {
+            "id": "41deb2b6334194be2b87c10f",
+            "question": "Count the number of medicines that have been prescribed to patient 10021312."
+        },
+        {
+            "id": "6767d8e3b7af5307480d3e8c",
+            "question": "How many patients in 2100 received percutaneous abdominal drainage in the same hospital encounter after being diagnosed with unspecified viral hepatitis c with hepatic coma?"
+        },
+        {
+            "id": "802527c0be8a9149dbd4a8eb",
+            "question": "What was the name of the organism that was found during the last urine test of patient 10008454 in 12/2100?"
+        },
+        {
+            "id": "484f6763a7263dfc6dd3843b",
+            "question": "What's the platelet count change of patient 10021487 last measured on the current hospital visit compared to the second to last value measured on the current hospital visit?"
+        },
+        {
+            "id": "94401d1b08ae71f5ad65ac7b",
+            "question": "What was patient 10020944's total volume of output on 03/10/2100?"
+        },
+        {
+            "id": "5812f2aa2ec32908144ea996",
+            "question": "What is the name of the procedures that were given to patient 10005909 two or more times?"
+        },
+        {
+            "id": "79e773e17e3c570dd78813ae",
+            "question": "How many patients received extirpation of matter from left lower lobe bronchus, via natural or artificial opening endoscopic treatment in the same month after having been diagnosed with other diseases of bronchus, not elsewhere classified since 2100?"
+        },
+        {
+            "id": "c7e591a3774d0f7222f7345c",
+            "question": "What is the difference between arterial blood pressure mean on patient 10002495 last measured on the last ICU visit compared to the value second to last measured on the last ICU visit?"
+        },
+        {
+            "id": "a5a346eb9f19336f14d5a615",
+            "question": "Could you inform me about patient 10019172's last o2 saturation pulseoxymetry since 07/07/2100?"
+        },
+        {
+            "id": "6a4f0f27325a4881d537e381",
+            "question": "Show me the five most common specimens tested since 2100."
+        },
+        {
+            "id": "1d085776a9f4303e625f4125",
+            "question": "How many hours have passed since patient 10039831's first platelet count laboratory test on the current hospital visit?"
+        },
+        {
+            "id": "e973b4ccb6182ec1b934fe53",
+            "question": "How much is the maximum total hospital bill when it includes a triiodothyronine (t3) lab test in 2100?"
+        },
+        {
+            "id": "38e7715444818223680cc90f",
+            "question": "How many hours have passed since patient 10021487 last received a laboratory test of eosinophils during this hospital encounter?"
+        },
+        {
+            "id": "8d3d64b56c340125f70300f3",
+            "question": "Count the number of drugs prescribed since 24 months ago for patient 10003046."
+        },
+        {
+            "id": "51c4e6f08f5029501e961a4a",
+            "question": "When did patient 10009628 receive an input for the first time on 10/02/this year?"
+        },
+        {
+            "id": "902c95e30f8c9752224d22f9",
+            "question": "Are there any changes in the prescribed drugs of patient 10039831 today compared to yesterday?"
+        },
+        {
+            "id": "35727539614c8de00c1936fa",
+            "question": "Has a procedure been performed on patient 10013049?"
+        },
+        {
+            "id": "4f0abb317b82d6a5f186ef14",
+            "question": "Present the count of ICU visits for patient 10021118 in the first hospital encounter."
+        },
+        {
+            "id": "621f1abf8ceb45784a8a62b6",
+            "question": "How many prescriptions for albumin 25% (12.5g / 50ml) were made last year?"
+        },
+        {
+            "id": "d0e1bf41e5fd8ca04ae79ba4",
+            "question": "What were the total amount of sterile water input that patient 10007818 received in their first ICU visit?"
+        },
+        {
+            "id": "2fc3c2a9b1a1bd5aa4960ca3",
+            "question": "When did patient 10007795 first leave the hospital since 2100?"
+        },
+        {
+            "id": "5ee025cab135eb911d61888a",
+            "question": "What are the four most frequent procedures for patients aged 50s throughout this year?"
+        },
+        {
+            "id": "f93686c3008e71187f331de5",
+            "question": "What were the four most frequent lab tests since 1 year ago?"
+        },
+        {
+            "id": "6e705025d851453c10482a2c",
+            "question": "Has any side effects been experienced by patient 3267 during a blood transfusion"
+        },
+        {
+            "id": "25d2b1ca042e80e4dec9ba6c",
+            "question": "Has there been any pacu crystalloid intake given to patient 10008287 in 10/this year?"
+        },
+        {
+            "id": "08e4e46ffbf10a71b11cc538",
+            "question": "What was the amount of glucose gel dose prescribed to patient 10016150 during their last hospital encounter?"
+        },
+        {
+            "id": "3bf09c03de716a687fc51856",
+            "question": "What percentile is 0.69 on a troponin t test among patients of the same age as patient 10002495 in their first hospital visit?"
+        },
+        {
+            "id": "522b43ceabd524cfde7e3316",
+            "question": "Are any new drugs prescribed to patient 10039831 today compared to the ones yesterday?"
+        },
+        {
+            "id": "20ff0d8a96d5878700a5ea94",
+            "question": "Patient 10036156, when was your last mrsa screen microbiology test on the last hospital visit?"
+        },
+        {
+            "id": "6b93b67bb974684b413b3c6a",
+            "question": "Can I know the total output amount for patient 10018081 since 11/27/2100?"
+        },
+        {
+            "id": "82c36b2b9cc4fe915955f4ec",
+            "question": "Inform me about the total amount of patient 10010471's input since 03/19/2100."
+        },
+        {
+            "id": "1c752280e681b6e8e598bdae",
+            "question": "When was the last time that patient 10021312 has received a red blood cells lab test during their last hospital encounter?"
+        },
+        {
+            "id": "3fc571e83a604003d6461674",
+            "question": "Calculate the number of patients who underwent a laboratory test for hematocrit since 1 year ago."
+        },
+        {
+            "id": "de871565192e846d9c7ca39a",
+            "question": "Did patient 10022017 have a pt test done in 10/2100?"
+        },
+        {
+            "id": "5b78e15830003c4050414093",
+            "question": "Was patient 10006053 diagnosed with anything during their first hospital visit?"
+        },
+        {
+            "id": "bb02020436904947b9602d44",
+            "question": "Tell me the percentile of the red blood cells value of 3.03 among patients of the same age as patient 10010471 in the first hospital encounter."
+        },
+        {
+            "id": "7eb920ea8c935405a34f2187",
+            "question": "What was the last time on their first ICU stay patient 10014078 had a minimum respiratory rate?"
+        },
+        {
+            "id": "5b7ca8d49d2817d537c89baa",
+            "question": "When were patient 10021938 first prescribed for nifedipine cr and calcium acetate at the same time since 09/2100?"
+        },
+        {
+            "id": "2202303447142eaeb02bfd69",
+            "question": "What is the minimum value of phosphate on patient 10021666 in 03/2100?"
+        },
+        {
+            "id": "c9fe1f1b8ec77f4a772615c7",
+            "question": "What was the last time, on the last ICU stay, that patient 10025612's heart rate was greater than 75.0?"
+        },
+        {
+            "id": "e7d4c4eea0ceb55fc4a7b51f",
+            "question": "During this hospital visit has iso-osmotic sodium chloride, lactated ringers, or metronidazole (flagyl) been prescribed for patient 10018081?"
+        },
+        {
+            "id": "040d18e997bb872c3314ccba",
+            "question": "Tell me what was patient 10008454's monthly minimum weight since 2 months ago?"
+        },
+        {
+            "id": "5e099470827356f7917d86bf",
+            "question": "Tell me the top five most commonly prescribed drugs in 2100."
+        },
+        {
+            "id": "2bc57e6b3e44d9ecf6f1c242",
+            "question": "When did patient 10016742 get their last input?"
+        },
+        {
+            "id": "0e2ed5b1977c59f79cff3b72",
+            "question": "How many patients with long-term (current) use of anticoagulants were diagnosed in the same hospital visit after previously being diagnosed with hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage i through stage iv, or unspecified since 2100?"
+        },
+        {
+            "id": "537ba5b0d8bba89f02aeaf41",
+            "question": "Since 06/14/2100, when did patient 10019172 have his last input?"
+        },
+        {
+            "id": "2fa869cf56451cb9220ecb8a",
+            "question": "How much lorazepam was prescribed to patient 10019777 first in 03/this year?"
+        },
+        {
+            "id": "4637ee6f3a563e19535756a3",
+            "question": "What were the four most frequently given diagnoses for patients who received partial hepatectomy previously within 2 months this year?"
+        },
+        {
+            "id": "4eaa02f29374fda17d73e7cc",
+            "question": "What is the average total hospital cost for a procedure involving single internal mammary-coronary artery bypass since 2100?"
+        },
+        {
+            "id": "a550f5200fba9da44eb6c772",
+            "question": "Tell me the minimum o2 saturation pulseoxymetry of patient 10010471 since 66 days ago."
+        },
+        {
+            "id": "571c7531441ce4b75b1fe333",
+            "question": "What was the first drug prescribed to patient 10009628 in 10/this year via the ng route?"
+        },
+        {
+            "id": "02759807d268a649ffbc56e0",
+            "question": "Can you tell me the total volume of foley output for patient 10018081 since 12/07/2100?"
+        },
+        {
+            "id": "b09c1296a97d4f7a4488f11f",
+            "question": "How many hours have passed since the first time that patient 10039831 stayed in careunit discharge lounge in the current hospital encounter?"
+        },
+        {
+            "id": "299ef20e44a70d1ce5af952a",
+            "question": "What are the new prescriptions for patient 10004733 today compared to those received yesterday?"
+        },
+        {
+            "id": "776aa437e8c7772107f91170",
+            "question": "Did patient 10021312 have any prescriptions for medicines on their last hospital encounter?"
+        },
+        {
+            "id": "828a8d42081c89ca4d6ca68a",
+            "question": "Will patient 97121 get any additional stool (received in transport system) test?"
+        },
+        {
+            "id": "01c9d2fa980c7d5a47334903",
+            "question": "Tell me the type of blood of patient 13440?"
+        },
+        {
+            "id": "7c84a7a9dd72cfd25b8b859c",
+            "question": "Count the number of patients who received a procedure since 2100 for extirpation of matter from right lower lung lobe, via natural or artificial opening endoscopic."
+        },
+        {
+            "id": "0063d54603cf0f791a4f2d03",
+            "question": "Has patient 10027445 had a right heart cardiac catheterization procedure in 2100?"
+        },
+        {
+            "id": "2dfbec4e54ac5d6edf34216d",
+            "question": "What was patient 10002495's first measured rdw-sd in 06/this year?"
+        },
+        {
+            "id": "5f697dd690488492bf17ca8e",
+            "question": "What were some of the four common specimen tests given since 2100?"
+        },
+        {
+            "id": "20ee7c2a0eec18d7b83ce79b",
+            "question": "At what time did the first incident of patient 10006053 having a maximum arterial blood pressure mean occur on last month/16?"
+        },
+        {
+            "id": "5d63012ba377b6abd13cc0ec",
+            "question": "How much am I expected to pay for regional lymph node excision?"
+        },
+        {
+            "id": "9e5c20a2a5d9bd9a11019222",
+            "question": "What was patient 10004733's monthly maximum value of body weight since 20 months ago?"
+        },
+        {
+            "id": "e1c8e8780d98ea2f4d439813",
+            "question": "Gather the total number of times patient 10019917 visited the hospital in 2100."
+        },
+        {
+            "id": "9ebfdd3bcd22fc2d0cb7c43c",
+            "question": "What are the immuno-cancer drugs of last 5 years."
+        },
+        {
+            "id": "a9a368d730f37e7a36b2aaf4",
+            "question": "What is the minimum total hospital cost involving a drug named ibuprofen suspension in 2100?"
+        },
+        {
+            "id": "d04f510b395b3ff38717d65a",
+            "question": "What kind of rooms are available now for singles?"
+        },
+        {
+            "id": "77238633972ba57331af47e1",
+            "question": "What was the total amount of ciprofloxacin 0.3% ophth soln that patient 10026354 has been prescribed since 10/2100?"
+        },
+        {
+            "id": "87058b47fe38c6fb7cbdc89a",
+            "question": "Can you tell me the first time patient 10018081 had a o2 saturation pulseoxymetry that was less than 98.0 since 354 days ago?"
+        },
+        {
+            "id": "2aeb48ba6aa5bb661580a085",
+            "question": "Can you tell me the first time patient 10027602 had a heart rate that was less than 97.0 on 12/02/this year?"
+        },
+        {
+            "id": "3b7aac248d67a932c390edb8",
+            "question": "What was the number of patients receiving excision of dental lesion of jaw in 2100?"
+        },
+        {
+            "id": "523b2264acf6a8ceaf29d220",
+            "question": "What was patient 10004733's last serology/blood's microbiology test time in 12/this year?"
+        },
+        {
+            "id": "12fbd03c50369014a82f4756",
+            "question": "How many patients were let go from hospitals since 1 year ago?"
+        },
+        {
+            "id": "35b0b505d474e73b841b45f6",
+            "question": "What was the last weight of patient 10029291 recorded since 03/2100?"
+        },
+        {
+            "id": "7f904e1c55c930388a753052",
+            "question": "How many patients required alteplase (catheter clearance)?"
+        },
+        {
+            "id": "5f5a69f769e752469c78c104",
+            "question": "What immuno-cancer drugs have been in use for the last five years?"
+        },
+        {
+            "id": "6e78d418898692d8783374c7",
+            "question": "Have any lab tests been performed on patient 10026406?"
+        },
+        {
+            "id": "0831dece04ef846871b1b934",
+            "question": "What was the diagnosis for patient 10003046 the first time in 2100?"
+        },
+        {
+            "id": "37921e0dd6b843c93c0dacc1",
+            "question": "Which are the top three most common lab tests in 2100?"
+        },
+        {
+            "id": "d27110d877b8d72776989d66",
+            "question": "Please count the hospital visits made by patient 10027445 in 2100."
+        },
+        {
+            "id": "297288464d61d257567d25a2",
+            "question": "What are the new medications prescribed to patient 10018081 today compared to those yesterday?"
+        },
+        {
+            "id": "066f306279b80b6d43827f27",
+            "question": "In 2100, what are the five frequently ordered treatments for patients who were diagnosed with cachexia during the same month?"
+        },
+        {
+            "id": "f7e72869cfd4d186d37a8a6d",
+            "question": "Has patient 10026354 undergone reposition left mandible with external fixation device, percutaneous approach?"
+        },
+        {
+            "id": "506c9dbd5d01f2cf98f45ec5",
+            "question": "List the top five most frequent lab tests during this year."
+        },
+        {
+            "id": "4e72bc8a053a80a638bcfec5",
+            "question": "Which immunocauteries have been used for the last five years?"
+        },
+        {
+            "id": "cf057692f01ed1e43b7ab26f",
+            "question": "What is the value of patient 10018845's monthly average or crystalloid intake input during their first hospital visit?"
+        },
+        {
+            "id": "d3f3a4406592054ad20c2093",
+            "question": "When did patient 10022017 get the microbiology test for the last time since 10/2100?"
+        },
+        {
+            "id": "233c13143fc7c9d92e63dbb4",
+            "question": "What drugs are being added to the prescription of patient 10004733 today compared to those yesterday?"
+        },
+        {
+            "id": "853d39a04eeeedbb0a28a7d6",
+            "question": "How much was the difference in weight of patient 10004422 measured at 2100-01-25 05:00:00 compared to the value measured at 2100-01-24 06:00:00?"
+        },
+        {
+            "id": "103007809bffe0c602448146",
+            "question": "How many patients were let go from hospitals in the last year?"
+        },
+        {
+            "id": "9e076ee4b1fab29e6fd20f7a",
+            "question": "What are the precautions that are incurred after undergoing a oth transureth prostatec procedure?"
+        },
+        {
+            "id": "0a34cd28b27d1c03905616d8",
+            "question": "How was patient 10039997 admitted to the hospital since 1 year ago in terms of admission type for the first time?"
+        },
+        {
+            "id": "07c7d0b230f28eb2bba883d4",
+            "question": "Has patient 10005909 been provided any medications since 11/2100?"
+        },
+        {
+            "id": "bd4b95a5ab6e7fce1ea29aca",
+            "question": "How often was the last time patient 20801 had a medication that should be regularly taken?"
+        },
+        {
+            "id": "e257942d050e74a2e2aef5b3",
+            "question": "What are the five commonly ordered medications for patients who were diagnosed with unspecified disorder of kidney and ureter previously in the same month, since 2100?"
+        },
+        {
+            "id": "58036fbf344f61c449c588f0",
+            "question": "Could you count the number of times patient 10039997 visited the hospital during the previous year?"
+        },
+        {
+            "id": "cd0bcb070c47177a7ad4ff35",
+            "question": "In the last year, how many patients were provided with vancomycin oral liquid?"
+        },
+        {
+            "id": "d459384c23821c7436fd1a3e",
+            "question": "Give me the top four most commonly prescribed medications during the same month to patients aged 60 or above after they were diagnosed with unspecified essential hypertension since 1 year ago."
+        },
+        {
+            "id": "dc9b3236056266b458fff17f",
+            "question": "How many hours has it been since patient 10004733 stayed in the careunit medical/surgical intensive care unit (micu/sicu) during this hospital visit for the first time?"
+        },
+        {
+            "id": "a5661f4d9bc983fe089c2f6d",
+            "question": "Was patient 10010471 given any drugs in the previous year?"
+        },
+        {
+            "id": "3842f39935a34d58b55be97d",
+            "question": "Did patient 10013049 get a sodium, whole blood lab test in 06/2100?"
+        },
+        {
+            "id": "d2c264c9a4496523fd9581ea",
+            "question": "On 10/13/2100, when did patient 10038081 have his first input?"
+        },
+        {
+            "id": "11334e5323118eea80ce40d5",
+            "question": "What were the top three most common procedures in 2100?"
+        },
+        {
+            "id": "95b245de3db0ff301118f6ef",
+            "question": "Was the hematocrit reading for patient 10001725 second measured on the last hospital visit less than the first value measured on the last hospital visit?"
+        },
+        {
+            "id": "067ed21678e9244b701465c3",
+            "question": "Was patient 10008287 given a bicarbonate lab test during the last hospital visit?"
+        },
+        {
+            "id": "f85c9633e450cf4188a98ce3",
+            "question": "Get me the top three most common diagnoses."
+        },
+        {
+            "id": "3e3f93fb3a2e4577befd898b",
+            "question": "Calculate patient 10006053's total output since 86 days ago."
+        },
+        {
+            "id": "163e20b7886f513a8897df5b",
+            "question": "Can you tell me the name of the output patient 10004733 had for the last time on 12/28/this year?"
+        },
+        {
+            "id": "85c4cb07f011b2641b16c688",
+            "question": "What are the four most common diagnoses for patients who previously had the dilation of right main bronchus with intraluminal device, via natural or artificial opening endoscopic procedure within 2 months since 1 year ago?"
+        },
+        {
+            "id": "3f37877d41058e4ed337aadb",
+            "question": "What was the organism found in the first microbiology test done on the patient 10021312's bronchial washings since 03/2100?"
+        },
+        {
+            "id": "d73c8f5b0105e85440aa6baf",
+            "question": "What are the maximum yearly number of patients diagnosed with glucocorticoid deficiency since 2100?"
+        },
+        {
+            "id": "555c677326428762a09481c7",
+            "question": "Has patient 10021312 been provided any medications?"
+        },
+        {
+            "id": "f8afb5281dcdfe12ea07f322",
+            "question": "How much is the price for lenalidomide (revlimide)15mg?"
+        },
+        {
+            "id": "ff717f132bef7b20380c93f7",
+            "question": "What was the name of the organism that was found in the last microbiology test on patient 10021487's abscess since 02/2100?"
+        },
+        {
+            "id": "781463ec4654dbff8c5df153",
+            "question": "Did patient 10002930 have any prescriptions for medicines in their last hospital visit?"
+        },
+        {
+            "id": "6395fc9f76e16f012c954890",
+            "question": "Currently, how many operating rooms are available?"
+        },
+        {
+            "id": "1e5faf727375a9ada1941625",
+            "question": "What is the average total hospital cost for a procedure involving total esophagectomy?"
+        },
+        {
+            "id": "bd64eba2a9801db69c14dd75",
+            "question": "How much did patient 10005817 weigh the first time it was measured in 12/2100?"
+        },
+        {
+            "id": "3de9617a7e8dcc80de879fc5",
+            "question": "What was the name of the output that patient 10039831 got first since 12/23/2100?"
+        },
+        {
+            "id": "dcfe3d31d256b6f0069568e5",
+            "question": "When, since 02/2100, was the first time patient 10027445 was prescribed a medication via the nu route?"
+        },
+        {
+            "id": "4ae26018d8ea48c61224e513",
+            "question": "How many patients underwent spinal tap during the same hospital encounter after the diagnosis of unspecified essential hypertension, last year?"
+        },
+        {
+            "id": "65e654ff18e5887458e5aa25",
+            "question": "Could you tell me the three most frequent microbiology tests?"
+        },
+        {
+            "id": "33d0ec324183f0e65eb1f466",
+            "question": "When was the first time patient 10020740 was prescribed drugs via po in 07/this year?"
+        },
+        {
+            "id": "a229a64f2bf74f9fc9dfa626",
+            "question": "In what ways can nystatin cream be ingested?"
+        },
+        {
+            "id": "facfa7d227ce410e9a85def3",
+            "question": "What is the title of the medication that was given to patient 10014078 first via the sc means on the last hospital stay?"
+        },
+        {
+            "id": "b1a78da076378d37eda3aeb6",
+            "question": "What are the top four most commonly diagnosed conditions since 1 year ago?"
+        },
+        {
+            "id": "6388862788004bf9b1e4345a",
+            "question": "Can you tell me when patient 10004733's last microbiology test was since 05/2100?"
+        }
+    ]
+}
