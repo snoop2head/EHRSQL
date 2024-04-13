@@ -76,7 +76,7 @@ class Text2SQLLightningModule(pl.LightningModule):
         # Compute Binary Classification metrics
         binary_label = target_is_impossible.detach().cpu().numpy()
         binary_pred = (logits_impossible.sigmoid().detach().cpu().numpy() > self.threshold).astype(int)
-        acc = metrics.accuracy_score(binary_label, binary_pred)
+        acc = (binary_label == binary_pred).sum().item() / binary_label.size(0)
         precision, recall, f1, _ = metrics.precision_recall_fscore_support(binary_label, binary_pred, average="binary")
 
         return {
