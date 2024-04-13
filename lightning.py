@@ -164,7 +164,6 @@ class Text2SQLLightningModule(pl.LightningModule):
         self.predictions = {}
 
     def test_step(self, batch: dict[str, torch.Tensor], idx: int) -> torch.Tensor:
-        
         # generate
         outputs = self.t5.generate(
             input_ids=batch["source_ids"],
@@ -195,11 +194,20 @@ class Text2SQLLightningModule(pl.LightningModule):
                 self.predictions[f"{i}"] = p
         
     def on_test_epoch_end(self):
+        # for each ddp process, save predictions
+        device_id = self.local_rank if self.local_rank != -1 else 0
         RESULT_DIR = f"./{self.config.logging.run_name}"
         os.makedirs(RESULT_DIR, exist_ok=True)
-        prediction_path = os.path.join(RESULT_DIR, "predictions.json")
+        prediction_path = os.path.join(RESULT_DIR, f"predictions_{device_id}.json")
         write_json(prediction_path, self.predictions)
-        os.system(f"cd {RESULT_DIR} && zip -r predictions.zip predictions.json")
+        
+        # gather all predictions and save
+        if self.trainer.is_global_zero:
+            predictions = {}
+            for i in range(self.trainer.world_size):
+                predictions.update(read_json(os.path.join(RESULT_DIR, f"predictions_{i}.json")))
+            write_json(os.path.join(RESULT_DIR, "predictions.json"), predictions)
+            os.system(f"cd {RESULT_DIR} && zip -r predictions.zip predictions.json")
         
 
     def configure_optimizers(self) -> tuple[list[Optimizer], list[dict[str, Any]]]:
