@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import sys
 import warnings
+import time
 
 import numpy as np
 import random
@@ -31,7 +32,10 @@ def set_seed(seed: int):
         torch.backends.cudnn.benchmark = False
 
 def main(config: DictConfig):
-    set_seed(config.seed)
+    if type(config.data.kfold_split) == int:
+        config.logging.run_name = f"{config.logging.run_name}_fold{config.data.kfold_split}"
+    else:
+        set_seed(config.seed)
     train_dataloader, val_dataloader, test_dataloader = create_dataloaders(config)
     
     checkpoint_name = config.logging.run_name
@@ -70,7 +74,8 @@ def main(config: DictConfig):
     )
     trainer.fit(Text2SQLLightningModule(config), train_dataloader, val_dataloader)
     trainer.test(model=Text2SQLLightningModule(config), ckpt_path=checkpoint.best_model_path, dataloaders=[test_dataloader])
-    gather_and_save(config, trainer) # gather all predictions and save
+    time.sleep(10) # wait for all processes to finish
+    gather_and_save(config, trainer, filter_error_pred=False) # gather all predictions and save
 
 if __name__ == "__main__":
     main(OmegaConf.merge(OmegaConf.load(sys.argv[1]), OmegaConf.from_cli()))

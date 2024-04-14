@@ -200,9 +200,14 @@ def trim_batch(input_ids, pad_token_id, attention_mask=None):
 
 def create_dataloaders(config: DictConfig) -> tuple[DataLoader, DataLoader, DataLoader]:
 
-    if config.data.split_ratio != 1.0:
+    if config.data.split_ratio != 1.0 and config.data.kfold_split is False:
+        print("Legacy data split as ehr instruction")
         NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, '__train')
         NEW_VALID_DIR = os.path.join(config.data.base_data_dir, '__valid')
+    elif config.data.split_ratio != 1.0 and type(config.data.kfold_split) == int:
+        print("K-Fold data split")
+        NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, f'__train_fold{config.data.kfold_split}')
+        NEW_VALID_DIR = os.path.join(config.data.base_data_dir, f'__valid_fold{config.data.kfold_split}')
     if config.data.split_ratio == 1.0:
         NEW_TRAIN_DIR = os.path.join(config.data.base_data_dir, 'train')
         NEW_VALID_DIR = os.path.join(config.data.base_data_dir, 'train')

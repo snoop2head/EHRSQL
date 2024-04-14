@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import sys
 import warnings
+import time
 
 from omegaconf import DictConfig, OmegaConf
 from pytorch_lightning import Trainer
@@ -18,6 +19,9 @@ warnings.filterwarnings("ignore")
 
 def main(config: DictConfig):
     _, _, test_dataloader = create_dataloaders(config)
+    
+    if type(config.data.kfold_split) == int:
+        config.logging.run_name = f"{config.logging.run_name}_fold{config.data.kfold_split}"
     if config.inference.generate_with_predict:
         checkpoint = ModelCheckpoint(monitor="val/RS10", mode="max", save_weights_only=True)
     else:
@@ -37,7 +41,8 @@ def main(config: DictConfig):
         callbacks=[checkpoint, LearningRateMonitor("step")],
     )
     trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
-    gather_and_save(config, trainer) # gather all predictions and save
+    time.sleep(10)  # wait for all processes to finish
+    gather_and_save(config, trainer, filter_error_pred=False) # gather all predictions and save
 
 if __name__ == "__main__":
     main(OmegaConf.merge(OmegaConf.load(sys.argv[1]), OmegaConf.from_cli()))
