@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")
 
 
 def main(config: DictConfig):
-    _, _, test_dataloader = create_dataloaders(config)
+    _, valid_dataloader, test_dataloader = create_dataloaders(config)
     
     if type(config.data.kfold_split) == int:
         config.logging.run_name = f"{config.logging.run_name}_fold{config.data.kfold_split}"
@@ -40,7 +40,10 @@ def main(config: DictConfig):
         logger=None,
         callbacks=[checkpoint, LearningRateMonitor("step")],
     )
-    trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
+    if not config.predict.inference_valid:
+        trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
+    else:
+        trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[valid_dataloader])
     time.sleep(20)  # wait for all processes to finish
     # gather_and_save(config, trainer, filter_error_pred=False) # gather all predictions and save
 

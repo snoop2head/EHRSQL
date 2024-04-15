@@ -198,7 +198,8 @@ class Text2SQLLightningModule(pl.LightningModule):
         device_id = self.local_rank if self.local_rank != -1 else 0
         RESULT_DIR = f"./RESULTS/{self.config.logging.run_name}"
         os.makedirs(RESULT_DIR, exist_ok=True)
-        prediction_path = os.path.join(RESULT_DIR, f"predictions_{device_id}.json")
+        pred_filename = f"predictions_{device_id}.json" if not self.config.predict.inference_valid else f"predictions_valid_{device_id}.json"
+        prediction_path = os.path.join(RESULT_DIR, pred_filename)
         write_json(prediction_path, self.predictions)
 
     def configure_optimizers(self) -> tuple[list[Optimizer], list[dict[str, Any]]]:

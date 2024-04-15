@@ -58,3 +58,4 @@ inference:
 
 predict:
   ckpt_path: /home/yjahn/joint-learning/text-to-sql/kl5931rb/checkpoints/baselinev3-flan-t5-largeepoch=8-step=2601.ckpt
+  inference_valid: false
