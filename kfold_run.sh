@@ -6,6 +6,7 @@ python predict.py ./config/flan-t5-large.yaml data.kfold_split=5 predict.ckpt_pa
 python predict.py ./config/flan-t5-large.yaml data.kfold_split=6 predict.ckpt_path=./text-to-sql/8d9yxbzf/checkpoints/baselinev3-flan-t5-large_fold6epoch=6-step=2023.ckpt
 python train.py ./config/flan-t5-large.yaml data.kfold_split=8
 python train.py ./config/flan-t5-large.yaml data.kfold_split=9
+python predict.py ./config/flan-t5-large.yaml data.kfold_split=8 predict.ckpt_path=./text-to-sql/d6rhbnpl/checkpoints/baselinev3-flan-t5-large_fold8epoch=5-step=1734.ckpt
 python train.py ./config/flan-t5-base.yaml data.kfold_split=0
 python train.py ./config/flan-t5-base.yaml data.kfold_split=1
 python train.py ./config/flan-t5-base.yaml data.kfold_split=2
