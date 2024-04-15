@@ -41,8 +41,8 @@ def main(config: DictConfig):
         callbacks=[checkpoint, LearningRateMonitor("step")],
     )
     trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
-    time.sleep(10)  # wait for all processes to finish
-    gather_and_save(config, trainer, filter_error_pred=False) # gather all predictions and save
+    time.sleep(20)  # wait for all processes to finish
+    # gather_and_save(config, trainer, filter_error_pred=False) # gather all predictions and save
 
 if __name__ == "__main__":
     main(OmegaConf.merge(OmegaConf.load(sys.argv[1]), OmegaConf.from_cli()))

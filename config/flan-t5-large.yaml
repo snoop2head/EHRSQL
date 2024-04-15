@@ -38,7 +38,7 @@ train:
   evaluation_strategy: epoch
   train_batch_size: 8 # per-device batch size
   valid_batch_size: 4 # per-device batch size
-  test_batch_size: 32 # per-device batch size
+  test_batch_size: 16 # per-device batch size
   accumulate_grad_batches: 1
   gradient_clip_val: 1.0
   gradient_checkpointing: false
@@ -57,4 +57,4 @@ inference:
   num_return_sequences: 1
 
 predict:
-  ckpt_path: /home/yjahn/joint-learning/text-to-sql/kl5931rb/checkpoints/baselinev3-flan-t5-largeepoch=8-step=2601.ckpt
+  ckpt_path: /home/yjahn/joint-learning/text-to-sql/2b39zjk4/checkpoints/baselinev3-flan-t5-large_fold2epoch=7-step=2312.ckpt
