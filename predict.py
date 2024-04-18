@@ -41,8 +41,10 @@ def main(config: DictConfig):
         callbacks=[checkpoint, LearningRateMonitor("step")],
     )
     if not config.predict.inference_valid:
+        print("Testing on test dataset")
         trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[test_dataloader])
     else:
+        print("Inferencing on valid dataset")
         trainer.test(model=Text2SQLLightningModule(config), ckpt_path=config.predict.ckpt_path, dataloaders=[valid_dataloader])
     time.sleep(20)  # wait for all processes to finish
     # gather_and_save(config, trainer, filter_error_pred=False) # gather all predictions and save
