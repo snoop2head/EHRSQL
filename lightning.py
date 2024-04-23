@@ -22,10 +22,6 @@ from scoring_program.postprocessing import post_process_sql
 from utils import read_json, write_json
 
 class Text2SQLLightningModule(pl.LightningModule):
-    """
-    https://github.com/snoop2head/DotNeuralNet/tree/main/src
-    https://github.com/ReadingLips/auxiliary-audio-LRS/tree/main/lrs2/src
-    """
     def __init__(self, config: DictConfig):
         super().__init__()
         self.config = config
@@ -160,7 +156,6 @@ class Text2SQLLightningModule(pl.LightningModule):
 
 
     def on_test_epoch_start(self):
-        """ TEST: https://github.com/ReadingLips/sync_auto_avsr/blob/mainv2/lightning.py """
         self.predictions = {}
 
     def test_step(self, batch: dict[str, torch.Tensor], idx: int) -> torch.Tensor:
