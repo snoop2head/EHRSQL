@@ -1,6 +1,3 @@
-# https://github.com/ReadingLips/CMTS-VSR/tree/coordinate/src
-# https://github.com/QuoQA-NLP/T5_Translation
-# https://github.com/QuoQA-NLP/MRC_Baseline/
 seed: 42
 
 data:
@@ -57,5 +54,5 @@ inference:
   num_return_sequences: 1
 
 predict:
-  ckpt_path: /home/yjahn/joint-learning/text-to-sql/kl5931rb/checkpoints/baselinev3-flan-t5-largeepoch=8-step=2601.ckpt
+  ckpt_path: ./text-to-sql/kl5931rb/checkpoints/baselinev3-flan-t5-largeepoch=8-step=2601.ckpt
   inference_valid: false
